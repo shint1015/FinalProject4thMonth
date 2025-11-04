@@ -1,0 +1,22 @@
+[
+    {
+        "code": "available",
+        "label": "Available",
+        "description": "Tickets are available for purchase."
+    },
+    {
+        "code": "sold_out",
+        "label": "Sold Out",
+        "description": "All tickets have been sold."
+    },
+    {
+        "code": "coming_soon",
+        "label": "Coming Soon",
+        "description": "Tickets will be available at a later date."
+    },
+    {
+        "code": "cancelled",
+        "label": "Cancelled",
+        "description": "The event has been cancelled and tickets are no longer valid."
+    }
+]

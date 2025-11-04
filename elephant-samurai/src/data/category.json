@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Musical",
+        "description": "Stage performance combining music, acting, and dance."
+    },
+    {
+        "id": 2,
+        "name": "Concert",
+        "description": "Live music performance by a solo artist or band."
+    },
+    {
+        "id": 3,
+        "name": "Comedy Show",
+        "description": "Live stand-up or sketch comedy performance."
+    },
+    {
+        "id": 4,
+        "name": "Stage Play",
+        "description": "Dramatic theatrical production performed on stage."
+    }
+]

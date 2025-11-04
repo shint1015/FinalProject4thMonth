@@ -1,0 +1,98 @@
+[
+    {
+        "event_id": "evt-2025-10-29-disney",
+        "venue_id": "venue-large-01",
+        "seat_id": "Orchestra-A5",
+        "price": 200,
+        "currency": "USD",
+        "status": "sold",
+        "user_id": "user_1001",
+        "order_id": "ord_9001",
+        "hold_expires_at": null,
+        "updated_at": "2025-10-01T18:00:00Z"
+    },
+    {
+        "event_id": "evt-2025-10-29-disney",
+        "venue_id": "venue-large-01",
+        "seat_id": "Orchestra-A6",
+        "price": 200,
+        "currency": "USD",
+        "status": "held",
+        "user_id": "user_1002",
+        "order_id": null,
+        "hold_expires_at": "2025-10-01T18:30:00Z",
+        "updated_at": "2025-10-01T18:20:00Z"
+    },
+    {
+        "event_id": "evt-2025-10-31-maltese",
+        "venue_id": "venue-medium-01",
+        "seat_id": "B12",
+        "price": 95,
+        "currency": "USD",
+        "status": "reserved",
+        "user_id": "user_1003",
+        "order_id": "ord_9002",
+        "hold_expires_at": null,
+        "updated_at": "2025-10-02T15:10:00Z"
+    },
+    {
+        "event_id": "evt-2025-11-01-comedy",
+        "venue_id": "venue-small-01",
+        "seat_id": "A4",
+        "price": 50,
+        "currency": "USD",
+        "status": "available",
+        "user_id": null,
+        "order_id": null,
+        "hold_expires_at": null,
+        "updated_at": "2025-10-03T12:00:00Z"
+    },
+    {
+        "event_id": "evt-2025-11-03-romeo",
+        "venue_id": "venue-medium-01",
+        "seat_id": "C10",
+        "price": 70,
+        "currency": "USD",
+        "status": "sold",
+        "user_id": "user_1004",
+        "order_id": "ord_9003",
+        "hold_expires_at": null,
+        "updated_at": "2025-10-04T09:10:00Z"
+    },
+    {
+        "event_id": "evt-2025-11-10-phantom",
+        "venue_id": "venue-medium-01",
+        "seat_id": "E3",
+        "price": 55,
+        "currency": "USD",
+        "status": "blocked",
+        "user_id": null,
+        "order_id": null,
+        "hold_expires_at": null,
+        "updated_at": "2025-10-05T11:40:00Z"
+    },
+    {
+        "event_id": "evt-2025-11-14-oor",
+        "venue_id": "venue-large-01",
+        "seat_id": "Mezzanine-B7",
+        "price": 95,
+        "currency": "USD",
+        "status": "available",
+        "user_id": null,
+        "order_id": null,
+        "hold_expires_at": null,
+        "updated_at": "2025-10-05T14:00:00Z"
+    },
+    {
+        "event_id": "evt-2025-11-28-frozen",
+        "venue_id": "venue-large-01",
+        "seat_id": "Balcony-C10",
+        "price": 45,
+        "currency": "USD",
+        "status": "held",
+        "user_id": "user_1005",
+        "order_id": null,
+        "hold_expires_at": "2025-10-06T18:00:00Z",
+        "updated_at": "2025-10-06T17:55:00Z"
+    }
+]
