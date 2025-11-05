@@ -1,0 +1,22 @@
+@theme {
+    --animate-slide-in-right: slide-in-right 300ms ease-out both;
+    --animate-slide-out-right: slide-out-right 200ms ease-in both;
+
+    @keyframes slide-in-right {
+        from {
+            @apply translate-x-full opacity-0;
+        }
+        to {
+            @apply translate-x-0 opacity-100;
+        }
+    }
+
+    @keyframes slide-out-right {
+        from {
+            @apply translate-x-0 opacity-100;
+        }
+        to {
+            @apply translate-x-full opacity-0 hidden;
+        }
+    }
+}
