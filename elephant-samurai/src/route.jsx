@@ -6,6 +6,7 @@ import {
     HeadContent,
 } from '@tanstack/react-router'
 import Layout from './Layout.jsx'
+import Home from './pages/Home.jsx'
 const rootRoute = createRootRoute({
     component: () => (
         <Layout>
@@ -18,7 +19,7 @@ const rootRoute = createRootRoute({
 const indexRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/',
-    component: () => <div class='text-white'>Index Page</div>,
+    component: () => <Home />,
 })
 
 const testRoute = createRoute({

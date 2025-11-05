@@ -21,6 +21,7 @@
     --text-body: 1rem; /* 16px */
     --text-subbody: 0.875rem; /* 14px */
     --text-detail: 0.75rem; /* 12px */
+    --bg-history : url('./src/assets/img/homepage_history.png')
 }
 @media (min-width: 768px) {
     @theme {
@@ -40,5 +41,24 @@
 @layer base {
     body {
         @apply font-dm-sans;
+        @apply bg-primary-black
     }
+    /* if you want decide element style, you can write style like this */
+    h1 {
+        @apply font-climate-crisis text-h1;
+    }
+
+    h2 {
+        @apply font-climate-crisis text-h2;
+    }
+
+    h3 {
+        @apply font-climate-crisis text-h3;
+    }
+
+    h4 {
+        @apply font-climate-crisis text-h4;
+    }
+
+    
 }
