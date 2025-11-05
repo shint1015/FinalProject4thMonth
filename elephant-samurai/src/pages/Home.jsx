@@ -15,10 +15,10 @@ export default function Home() {
               <h1 className="text-primary-yellow text-display">
                 SAMURAI
               </h1>
-              <h1 className="mt-[-30px] text-primary-yellow font-text-display">
+              <h1 className="mt-[-30px] text-primary-yellow text-display">
                 ELEPHANT
               </h1>
-              <p className="text-primary-yellow font-text-title">
+              <p className="text-primary-yellow text-title">
                 Studio Theatre
               </p>
             </div>
@@ -26,7 +26,7 @@ export default function Home() {
 
           {/* Upcoming event */}
           <div className="p-[80px]">
-            <h1 className="text-primary-yellow font-text-h1">
+            <h1 className="text-primary-yellow text-h1">
               UPCOMING EVENT
             </h1>
 
@@ -35,14 +35,14 @@ export default function Home() {
 
           {/* History */}
           <div className="relative w-full h-[550px] bg-cover bg-[image:var(--bg-history)] flex justify-center">
-            <div className="p-[80px] flex justify-center flex-col text-center w-[45%]">
-              <h4 className="text-primary-yellow font-text-h4">
+            <div className="p-[80px] flex justify-center flex-col text-center w-[55%]">
+              <h4 className="text-primary-yellow text-h4">
                 SINCE 1995,
               </h4>
-              <p className="mt-4 text-primary-white">
+              <p className="mt-4 text-primary-white text-body">
                 For more than twenty years, Samurai Elephant has stood as a space where creativity meets passion, Uniting artists and audiences through unforgettable stories on stage.
               </p>
-              <p className="mt-4 text-primary-white">
+              <p className="mt-4 text-primary-white text-body">
                 Explore our <a className="underline">seating and venue layout ↗</a> to plan your perfect view.
               </p>
             </div>
@@ -51,17 +51,17 @@ export default function Home() {
 
           {/* Location */}
            <div className="p-[80px]">
-            <h1 className="text-primary-yellow font-text-h1">
+            <h1 className="text-primary-yellow text-h1">
                 FIND US HERE
             </h1>
             <div className="mt-4 flex flex-row gap-[80px] justify-center items-center">
               <LocationPhoto/>
               <div className="w-[40%]">
-                <p className="text-primary-white">
+                <p className="text-primary-white text-body">
                   The Sumarai Elephant Studio theater is located in the heart of downtown Vancouver at 111 Hollywood Street.<br></br>
                   There are several parking lots within walking distance from the theatre in addition to meter parking on Daiki St. & Shin St.
                 </p>
-                <p className="mt-4 text-primary-white">
+                <p className="mt-4 text-primary-white text-body">
                   Parking lot information, Easy Park: <a className="underline">www.easypark.ca ↗</a>
                 </p>
               </div>
