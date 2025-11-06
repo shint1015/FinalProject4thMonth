@@ -1,4 +1,4 @@
-import HeroSectionVideo from "@/assets/video/HeroSection.mp4"
+import HeroSectionVideo from "@/assets/video/HeroSection.webm"
 import Location from '@/assets/img/Location.png';
 
 function LocationPhoto() {
