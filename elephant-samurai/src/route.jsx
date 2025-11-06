@@ -7,6 +7,8 @@ import {
 } from '@tanstack/react-router'
 import Layout from './Layout.jsx'
 import Home from './pages/Home.jsx'
+import About from './pages/About.jsx'
+
 const rootRoute = createRootRoute({
     component: () => (
         <Layout>
@@ -27,8 +29,18 @@ const testRoute = createRoute({
     path: '/test',
     component: () => <div class='text-white'>Test Page</div>,
 })
+// add routing
+const aboutRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/about',
+    component: () => <About />,
+})
 
-const routeTree = rootRoute.addChildren([indexRoute, testRoute])
+const routeTree = rootRoute.addChildren([
+    indexRoute,
+    testRoute,
+    aboutRoute
+])
 
 export const router = createRouter({
     routeTree,
