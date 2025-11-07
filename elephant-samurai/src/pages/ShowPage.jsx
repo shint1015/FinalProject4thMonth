@@ -5,68 +5,62 @@ import { shows } from "../data/event.json";
 export default function ShowPage() {
  
 
-  return (
-    <main className="bg-black min-h-screen text-yellow-300 font-['Urbanist'] px-10 py-8">
-      {/* タイトル */}
-      <h1 className="text-5xl font-extrabold mb-8">Shows</h1>
+    return (
+        <main className="bg-black min-h-screen  px-10 py-8">
+            {/*title*/}
+            <h1 className="text-5xl text-primary-yellow font-climate-crisis mb-8 ">Shows</h1>
 
-      {/* 検索バー & フィルター */}
-      <div className="flex justify-between items-center mb-8">
-        <input
-          type="text"
-          placeholder="Search shows"
-          className="w-1/2 bg-transparent border-b border-gray-600 text-white focus:outline-none"
-        />
-        <div className="flex gap-4">
-          <select className="bg-black text-yellow-300 border border-gray-600 rounded-md px-3 py-1">
-            <option>Date</option>
-          </select>
-          <select className="bg-black text-yellow-300 border border-gray-600 rounded-md px-3 py-1">
-            <option>Categories</option>
-          </select>
-        </div>
-      </div>
+            {/* bar filter*/}
+            <div className="flex justify-between items-center mb-8">
+                <input
+                    type="text"
+                    placeholder="Search shows"
+                    className="w-1/2 bg-primary-black border-b border-gray-600 text-primary-white focus:outline-none"
+                />
+                <div className="flex gap-2">
+                    <button className="flex bg-primary-black border border-primary-yellow text-primary-white rounded-[10%] px-3 py-1">
+                        <span>Date  </span>
+                        <img src="/assets/img/CaretDown.png" alt="icon" className="w-5 h-5" />
+                    </button>
 
-      {/* グリッド部分 */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {shows.map((show, i) => (
-          <div
-            key={i}
-            className="bg-neutral-900 rounded-2xl overflow-hidden shadow-md hover:shadow-yellow-400/30 transition"
-          >
-            <img
-              src={show.img}
-              alt={show.title}
-              className="w-full h-60 object-cover"
-            />
-            <div className="p-4">
-              <p className="text-gray-400 text-sm mb-1">{show.date}</p>
-              <p className="text-sm text-yellow-400 font-semibold">{show.category}</p>
-              <h2 className="text-lg font-bold text-white mt-1 mb-3 leading-snug">
-                {show.title}
-              </h2>
-              {show.soldOut ? (
-                <button className="bg-gray-500 text-black font-bold py-2 px-4 rounded-md w-full">
-                  Sold Out
-                </button>
-              ) : (
-                <button className="bg-yellow-400 text-black font-bold py-2 px-4 rounded-md w-full hover:bg-yellow-300 transition">
-                  Buy Tickets
-                </button>
-              )}
+                    <button className="flex bg-primary-black border border-primary-yellow text-primary-white rounded-[10%] px-3 py-1">
+                        <span>Date</span>
+                        <img src="/assets/img/CaretDown.png" alt="icon" className="w-5 h-5" />
+                    </button>
+                </div>
             </div>
-          </div>
-        ))}
-      </section>
 
-      {/* View More ボタン */}
-      <div className="text-center mt-10">
-        <button className="border border-yellow-400 text-yellow-400 font-semibold px-6 py-2 rounded-md hover:bg-yellow-400 hover:text-black transition">
-          View More
-        </button>
-      </div>
-    </main>
-  );
+            {/* card part */}
+            <section className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                {shows.map((show, i) => (//index as key
+                    <div key={i} className="bg-primary-black  ">
+                        <p className="text-primary-white text-sm mb-1">{show.date}</p>
+                        <img src={show.img} alt={show.title} className="w-full h-60 object-cover"
+                        />
+                        <div className="p-4 font-dm-sans">
+                            
+                            <p className="text-sm text-light-gray ">{show.category}</p>
+                            <h2 className="text-lg font-bold text-white mt-1 mb-3 leading-snug">
+                                {show.title}
+                            </h2>
+
+                            <button className="bg-primary-yellow text-black font-dm-sans py-2 px-4 rounded-md w-full hover:bg-yellow-300 transition">
+                                Buy Tickets
+                            </button>
+
+                        </div>
+                    </div>
+                ))}
+            </section>
+
+            {/* View Mor */}
+            <div className="text-center mt-10">
+                <button className="border border-primary- text-yellow-400 font-dm-sans px-6 py-2 rounded-md hover:bg-yellow-400 hover:text-black transition">
+                    View More
+                </button>
+            </div>
+        </main>
+    );
 }
 
 {/* VarList
