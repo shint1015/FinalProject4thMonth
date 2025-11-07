@@ -4,19 +4,24 @@
 
     @keyframes slide-in-right {
         from {
-            @apply translate-x-full opacity-0;
+            transform: translateX(100%);
+            opacity: 0;
         }
         to {
-            @apply translate-x-0 opacity-100;
+            transform: translateX(0);
+            opacity: 1;
         }
     }
 
     @keyframes slide-out-right {
         from {
-            @apply translate-x-0 opacity-100;
+            transform: translateX(0);
+            opacity: 1;
         }
         to {
-            @apply translate-x-full opacity-0 hidden;
+            transform: translateX(100%);
+            opacity: 0;
+            display: none;
         }
     }
 }
