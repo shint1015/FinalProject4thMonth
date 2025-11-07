@@ -37,7 +37,7 @@
         "admission_policy": {
             "description": "All ages. Children under 5 must be accompanied by an adult."
         },
-        "image_url": "https://example.com/disney-on-ice-2025.jpg",
+        "image_url": "/elephant-samurai/public/disney.png",
         "cast": [
             "Mickey Mouse",
             "Minnie Mouse",
@@ -80,7 +80,7 @@
             { "name": "Balcony/Back", "price": 45, "applies_to": { "rows": ["E", "F"] } }
         ],
         "admission_policy": { "description": "All ages welcome; under 12 must be with an adult." },
-        "image_url": "https://example.com/matt-maltese-2025.jpg",
+        "image_url": "/elephant-samurai/public/matt.png",
         "cast": ["Matt Maltese", "Touring Band"],
         "description": {
             "summary": "Intimate piano-driven indie pop set featuring new and fan-favorite songs.",
@@ -111,7 +111,7 @@
             { "name": "Back Row", "price": 35, "applies_to": { "rows": ["B"] } }
         ],
         "admission_policy": { "description": "Recommended 14+; adult supervision advised." },
-        "image_url": "https://example.com/jokes-please-2025.jpg",
+        "image_url": "/elephant-samurai/public/standUpComedy.png",
         "cast": ["Host Comedian", "Feature Acts", "Special Guests"],
         "description": {
             "summary": "A fast-paced stand-up showcase with rotating comics.",
@@ -143,7 +143,7 @@
             { "name": "Balcony / Back", "price": 40, "applies_to": { "rows": ["E", "F"] } }
         ],
         "admission_policy": { "description": "Ages 10+ recommended." },
-        "image_url": "https://example.com/romeo-juliet-2025.jpg",
+        "image_url": "/elephant-samurai/public/romio.png",
         "cast": ["Romeo", "Juliet", "Mercutio", "Tybalt", "Nurse", "Friar Lawrence"],
         "description": {
             "summary": "Shakespeare’s timeless tragedy presented with dynamic choreography.",
@@ -175,7 +175,7 @@
             { "name": "Balcony/Back", "price": 55, "applies_to": { "rows": ["E", "F"] } }
         ],
         "admission_policy": { "description": "Fog, flashing lights, and loud effects used." },
-        "image_url": "https://example.com/phantom-2025.jpg",
+        "image_url": "/elephant-samurai/public/thePhantom.png",
         "cast": ["The Phantom", "Christine Daaé", "Raoul", "Carlotta", "Meg Giry"],
         "description": {
             "summary": "Iconic musical with soaring melodies and grand staging.",
@@ -224,7 +224,7 @@
             }
         ],
         "admission_policy": { "description": "All ages show." },
-        "image_url": "https://example.com/oneokrock-2025.jpg",
+        "image_url": "/elephant-samurai/public/oneOkRock.png",
         "cast": ["Taka", "Toru", "Ryota", "Tomoya"],
         "description": {
             "summary": "High-energy rock concert with arena-scale production.",
@@ -260,7 +260,7 @@
             { "name": "Upper Deck", "price": 85, "applies_to": { "section": "Balcony" } }
         ],
         "admission_policy": { "description": "Strobe/laser effects used." },
-        "image_url": "https://example.com/u2-achtung-2025.jpg",
+        "image_url": "/elephant-samurai/public/U2UV.png",
         "cast": ["Bono", "The Edge", "Adam Clayton", "Larry Mullen Jr."],
         "description": {
             "summary": "A stadium-scale production celebrating ‘Achtung Baby’.",
@@ -298,7 +298,7 @@
         "admission_policy": {
             "description": "All ages. Booster seats available while supplies last."
         },
-        "image_url": "https://example.com/frozen-broadway-2025.jpg",
+        "image_url": "/elephant-samurai/public/frozen.png",
         "cast": ["Elsa", "Anna", "Kristoff", "Olaf", "Hans", "Sven Ensemble"],
         "description": {
             "summary": "Hit Broadway adaptation of Disney’s Frozen with spectacular effects.",
