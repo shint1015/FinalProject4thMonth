@@ -17,7 +17,7 @@ export default function Footer() {
                 </div>
                 <div className='w-full sm:w-[25%] md:w-[40%] lg:w-[45%] sm:justify-items-end'>
                     <div className='mb-2 sm:mb-4'>
-                        <ul className='m-auto sm:m-[initial] w-[50%] sm:w-full flex justify-between gap-x-2'>
+                        <ul className='m-auto sm:m-[initial] w-[35%] sm:w-full flex justify-between gap-x-1 sm:gap-x-2'>
                             <li>
                                 <img className='w-6' src={FacebookIcon} alt='Facebook' />
                             </li>

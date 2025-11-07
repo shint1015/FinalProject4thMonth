@@ -1,25 +1,25 @@
 @theme {
-    --animate-slide-in-right: slide-in-right 300ms ease-out both;
-    --animate-slide-out-right: slide-out-right 200ms ease-in both;
+    --animate-slide-in-top: slide-in-top 300ms ease-out both;
+    --animate-slide-out-top: slide-out-top 200ms ease-in both;
 
-    @keyframes slide-in-right {
+    @keyframes slide-in-top {
         from {
-            transform: translateX(100%);
+            transform: translateY(-100%);
             opacity: 0;
         }
         to {
-            transform: translateX(0);
+            transform: translateY(0);
             opacity: 1;
         }
     }
 
-    @keyframes slide-out-right {
+    @keyframes slide-out-top {
         from {
-            transform: translateX(0);
+            transform: translateY(0);
             opacity: 1;
         }
         to {
-            transform: translateX(100%);
+            transform: translateY(-100%);
             opacity: 0;
             display: none;
         }
