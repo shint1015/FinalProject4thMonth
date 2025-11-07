@@ -1,16 +1,12 @@
-import { Link } from '@tanstack/react-router'
+import Footer from './components/layout/Footer'
+import Header from './components/layout/Header'
 
 const Layout = ({ children }) => {
     return (
-        <div>
-            <header>
-                Header
-                <nav>
-                    <Link to='/'>Home</Link> | <Link to='/test'>Test</Link>
-                </nav>
-            </header>
+        <div className='bg-primary-black text-primary-white'>
+            <Header />
             <main>{children}</main>
-            <footer>Footer</footer>
+            <Footer />
         </div>
     )
 }
