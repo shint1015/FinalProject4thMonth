@@ -3,8 +3,16 @@ import { useState } from 'react'
 import logo from '@/assets/img/Logo.svg'
 import hamburgerMenuIcon from '@/assets/icon/HamburgerMenu.svg'
 import xmarkIcon from '@/assets/icon/xmark.svg'
+import { useContext } from 'react'
+import { AuthContext } from '@/hook/useAuth.jsx'
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { UserCircle } from '@/assets/icon/UserCircle.svg'
 
 export default function Header() {
+    const { user, isAuthenticated, signOut } = useContext(AuthContext)
+    console.log('Header - isAuthenticated:', isAuthenticated)
+    console.log('Header - user:', user)
+
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(undefined)
     const toggleMobileMenu = () => {
         setMobileMenuOpen(prev => !prev)
@@ -48,16 +56,70 @@ export default function Header() {
                 </nav>
             </div>
             <div>
-                <button className='button border border-primary-yellow text-primary-yellow py-2 px-4 rounded tracking-wider sm:block hidden'>
-                    Log in
-                </button>
-                <button id='hamburger-menu' className='sm:hidden block' onClick={toggleMobileMenu}>
-                    <img
-                        src={isMobileMenuOpen ? xmarkIcon : hamburgerMenuIcon}
-                        alt='Menu'
-                        className='h-7 sm:h-14'
-                    />
-                </button>
+                {isAuthenticated && user ? (
+                    <>
+                        {/* Profile dropdown */}
+                        <Menu as='div' className='relative ml-3'>
+                            <MenuButton className='relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-yellow'>
+                                <span className='absolute -inset-1.5' />
+                                <span className='sr-only'>Open user menu</span>
+                                <img
+                                    alt='user profile'
+                                    src={UserCircle}
+                                    className='size-8 rounded-full bg-primary-black outline -outline-offset-1 outline-white/10'
+                                />
+                            </MenuButton>
+
+                            <MenuItems
+                                transition
+                                className='absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-primary-black py-1 outline -outline-offset-1 outline-white/10 transition data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in'
+                            >
+                                <MenuItem>
+                                    <a
+                                        href='#'
+                                        className='block px-4 py-2 text-sm text-primary-white data-focus:bg-white/5 data-focus:outline-hidden'
+                                    >
+                                        Your profile
+                                    </a>
+                                </MenuItem>
+                                <MenuItem>
+                                    <a
+                                        href='#'
+                                        className='block px-4 py-2 text-sm text-primary-white data-focus:bg-white/5 data-focus:outline-hidden'
+                                    >
+                                        Settings
+                                    </a>
+                                </MenuItem>
+                                <MenuItem>
+                                    <a
+                                        href='#'
+                                        onClick={signOut}
+                                        className='block px-4 py-2 text-sm text-primary-white data-focus:bg-white/5 data-focus:outline-hidden'
+                                    >
+                                        Sign out
+                                    </a>
+                                </MenuItem>
+                            </MenuItems>
+                        </Menu>
+                    </>
+                ) : (
+                    <>
+                        <button className='button border border-primary-yellow text-primary-yellow py-2 px-4 rounded tracking-wider sm:block hidden'>
+                            Log in
+                        </button>
+                        <button
+                            id='hamburger-menu'
+                            className='sm:hidden block'
+                            onClick={toggleMobileMenu}
+                        >
+                            <img
+                                src={isMobileMenuOpen ? xmarkIcon : hamburgerMenuIcon}
+                                alt='Menu'
+                                className='h-7 sm:h-14'
+                            />
+                        </button>
+                    </>
+                )}
             </div>
             <div
                 id='mobile-menu'
