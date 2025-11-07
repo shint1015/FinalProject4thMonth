@@ -7,7 +7,7 @@ import TiktokIcon from '@/assets/icon/TikTokLogo.svg'
 
 export default function Footer() {
     return (
-        <footer className='absolute bottom-0 bg-primary-yellow text-primary-black font-extralight w-full'>
+        <footer className=' bg-primary-yellow text-primary-black font-extralight w-full'>
             <div className='flex pt-15 px-15 mb-6 flex-between justify-center flex-wrap m-auto'>
                 <div className='w-[75%] md:w-[60%] lg:w-[55%] mb-6 sm:mb-0'>
                     <picture>
