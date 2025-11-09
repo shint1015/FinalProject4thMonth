@@ -32,9 +32,7 @@ export default function LoginForm() {
 
     return (
         <>
-            <h1 className='text-primary-yellow text-h4 font-climate-crisis text-center pb-3'>
-                Log in
-            </h1>
+            <h1 className='text-primary-yellow text-h1 text-center pb-3'>Log in</h1>
             <form onSubmit={handleSubmit} className='flex flex-col gap-4 w-[70%] m-auto'>
                 {error && <div className='error-message'>{error}</div>}
                 <input
