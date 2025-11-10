@@ -5,12 +5,13 @@
         "category": "Musical",
         "date": "Thursday, October 29th, 2025",
         "time": { "start": "2025-10-29T20:00:00", "end": "2025-10-29T22:00:00" },
+        "showTime": "8:00pm",
         "venue_id": "venue-large-01",
         "currency": "USD",
         "pricing_rules": [
             {
                 "name": "Orchestra VIP Center",
-                "price": 200,
+                "price": "$50 - $200",
                 "applies_to": {
                     "section": "Orchestra",
                     "rows": ["A", "B", "C"],
@@ -35,9 +36,9 @@
             { "name": "Balcony", "price": 70, "applies_to": { "section": "Balcony" } }
         ],
         "admission_policy": {
-            "description": "All ages. Children under 5 must be accompanied by an adult."
+            "description": "This show is suitable for all ages. Children under 5 must be accompanied by an adult."
         },
-        "image_url": "/elephant-samurai/public/disney.png",
+        "image_url": "/disney.png",
         "cast": [
             "Mickey Mouse",
             "Minnie Mouse",
@@ -48,7 +49,10 @@
             "Zootopia Ensemble"
         ],
         "description": {
-            "summary": "A magical Disney experience on ice with dazzling skating and beloved songs.",
+            "summary1": "Step into a magical world where your favorite Disney characters come to life on ice in DISNEY ON ICE – LET’S DANCE 2025! This spectacular musical theatre experience brings together dazzling skating, enchanting storytelling, and breathtaking choreography that will delight audiences of all ages.",
+            "summary2": "Join Mickey, Minnie, and an unforgettable cast of Disney friends as they take you on a journey filled with laughter, adventure, and heartwarming moments. From the whimsical streets of Arendelle with Elsa and Anna, to the vibrant energy of Zootopia, and the timeless magic of Cinderella and The Lion King, every scene is a celebration of music, movement, and imagination.",
+            "summary3": "Featuring state-of-the-art lighting, vibrant costumes, and stunning ice artistry, LET’S DANCE 2025 is more than just a show — it’s a fully immersive experience. Watch in awe as skaters glide and spin in perfect harmony with Disney’s most beloved songs, performing breathtaking routines that combine athleticism with artistry.",
+            "summary4": "Perfect for families, friends, and Disney fans of all ages, this show promises to leave you smiling, singing, and dancing along. Whether it’s your first Disney experience on ice or a cherished tradition, DISNEY ON ICE – LET’S DANCE 2025 delivers unforgettable memories, magical moments, and a celebration of the joy of dance, music, and imagination.",
             "details": [
                 "Immersive lighting, vibrant costumes, and choreographed routines.",
                 "Family-friendly celebration of music, dance, and imagination."
@@ -63,6 +67,7 @@
         "category": "Concert",
         "date": "Friday, October 31st, 2025",
         "time": { "start": "2025-10-31T19:30:00", "end": "2025-10-31T22:00:00" },
+        "showTime": "8:00 PM",
         "venue_id": "venue-medium-01",
         "currency": "USD",
         "pricing_rules": [
@@ -80,7 +85,7 @@
             { "name": "Balcony/Back", "price": 45, "applies_to": { "rows": ["E", "F"] } }
         ],
         "admission_policy": { "description": "All ages welcome; under 12 must be with an adult." },
-        "image_url": "/elephant-samurai/public/matt.png",
+        "image_url": "/matt.png",
         "cast": ["Matt Maltese", "Touring Band"],
         "description": {
             "summary": "Intimate piano-driven indie pop set featuring new and fan-favorite songs.",
@@ -95,6 +100,7 @@
         "category": "Comedy Show",
         "date": "Saturday, November 1st, 2025",
         "time": { "start": "2025-11-01T19:00:00", "end": "2025-11-01T20:30:00" },
+        "showTime": "7:00 PM",
         "venue_id": "venue-small-01",
         "currency": "USD",
         "pricing_rules": [
@@ -111,7 +117,7 @@
             { "name": "Back Row", "price": 35, "applies_to": { "rows": ["B"] } }
         ],
         "admission_policy": { "description": "Recommended 14+; adult supervision advised." },
-        "image_url": "/elephant-samurai/public/standUpComedy.png",
+        "image_url": "/standUpComedy.png",
         "cast": ["Host Comedian", "Feature Acts", "Special Guests"],
         "description": {
             "summary": "A fast-paced stand-up showcase with rotating comics.",
@@ -126,6 +132,7 @@
         "category": "Stage Play",
         "date": "Monday, November 3rd, 2025",
         "time": { "start": "2025-11-03T19:30:00", "end": "2025-11-03T21:50:00" },
+        "showTime": "8:00 PM",
         "venue_id": "venue-medium-01",
         "currency": "USD",
         "pricing_rules": [
@@ -143,7 +150,7 @@
             { "name": "Balcony / Back", "price": 40, "applies_to": { "rows": ["E", "F"] } }
         ],
         "admission_policy": { "description": "Ages 10+ recommended." },
-        "image_url": "/elephant-samurai/public/romio.png",
+        "image_url": "/romio.png",
         "cast": ["Romeo", "Juliet", "Mercutio", "Tybalt", "Nurse", "Friar Lawrence"],
         "description": {
             "summary": "Shakespeare’s timeless tragedy presented with dynamic choreography.",
@@ -158,6 +165,7 @@
         "category": "Stage Play",
         "date": "Monday, November 10th, 2025",
         "time": { "start": "2025-11-10T19:00:00", "end": "2025-11-10T22:00:00" },
+        "showTime": "8:00 PM",
         "venue_id": "venue-medium-01",
         "currency": "USD",
         "pricing_rules": [
@@ -175,7 +183,7 @@
             { "name": "Balcony/Back", "price": 55, "applies_to": { "rows": ["E", "F"] } }
         ],
         "admission_policy": { "description": "Fog, flashing lights, and loud effects used." },
-        "image_url": "/elephant-samurai/public/thePhantom.png",
+        "image_url": "/thePhantom.png",
         "cast": ["The Phantom", "Christine Daaé", "Raoul", "Carlotta", "Meg Giry"],
         "description": {
             "summary": "Iconic musical with soaring melodies and grand staging.",
@@ -190,6 +198,7 @@
         "category": "Concert",
         "date": "Friday, November 14th, 2025",
         "time": { "start": "2025-11-14T20:00:00", "end": "2025-11-14T22:30:00" },
+        "showTime": "8:00 PM",
         "venue_id": "venue-large-01",
         "currency": "USD",
         "pricing_rules": [
@@ -224,7 +233,7 @@
             }
         ],
         "admission_policy": { "description": "All ages show." },
-        "image_url": "/elephant-samurai/public/oneOkRock.png",
+        "image_url": "/oneOkRock.png",
         "cast": ["Taka", "Toru", "Ryota", "Tomoya"],
         "description": {
             "summary": "High-energy rock concert with arena-scale production.",
@@ -239,6 +248,7 @@
         "category": "Concert",
         "date": "Thursday, November 20th, 2025",
         "time": { "start": "2025-11-20T20:00:00", "end": "2025-11-20T22:30:00" },
+        "showTime": "8:00 PM",
         "venue_id": "venue-large-01",
         "currency": "USD",
         "pricing_rules": [
@@ -260,7 +270,7 @@
             { "name": "Upper Deck", "price": 85, "applies_to": { "section": "Balcony" } }
         ],
         "admission_policy": { "description": "Strobe/laser effects used." },
-        "image_url": "/elephant-samurai/public/U2UV.png",
+        "image_url": "/U2UV.png",
         "cast": ["Bono", "The Edge", "Adam Clayton", "Larry Mullen Jr."],
         "description": {
             "summary": "A stadium-scale production celebrating ‘Achtung Baby’.",
@@ -275,6 +285,7 @@
         "category": "Musical",
         "date": "Friday, November 28th, 2025",
         "time": { "start": "2025-11-28T18:30:00", "end": "2025-11-28T20:30:00" },
+        "showTime": "7:30 PM",
         "venue_id": "venue-large-01",
         "currency": "USD",
         "pricing_rules": [
@@ -298,7 +309,7 @@
         "admission_policy": {
             "description": "All ages. Booster seats available while supplies last."
         },
-        "image_url": "/elephant-samurai/public/frozen.png",
+        "image_url": "/frozen.png",
         "cast": ["Elsa", "Anna", "Kristoff", "Olaf", "Hans", "Sven Ensemble"],
         "description": {
             "summary": "Hit Broadway adaptation of Disney’s Frozen with spectacular effects.",

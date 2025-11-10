@@ -1,9 +1,30 @@
-import { shows } from "../data/event.json";
+import { useState, useEffect } from "react";
+import { Link } from "@tanstack/react-router";
+import { showDetailRoute } from "../route";
+
 
 
 
 export default function ShowPage() {
- 
+
+    const [shows, setShows] = useState([]);
+    useEffect(() => {
+        fetch('/data/event.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log("fetched show:", data);
+                setShows(data);
+            })
+            .catch(error => console.error('Error fetching shows:', error));
+    }, []);
+
+
+
 
     return (
         <main className="bg-black min-h-screen  px-10 py-8">
@@ -12,46 +33,59 @@ export default function ShowPage() {
 
             {/* bar filter*/}
             <div className="flex justify-between items-center mb-8">
-                <input
-                    type="text"
-                    placeholder="Search shows"
-                    className="w-1/2 bg-primary-black border-b border-gray-600 text-primary-white focus:outline-none"
-                />
+                <div className="flex gap-2 border-b border-primary-yellow pb-1">
+                    <img src="/MagnifyingGlass.svg" alt="icon" className="w-5 h-5" />
+                    <input
+                        type="text"
+                        placeholder="Search shows"
+                        className="w-1/2 bg-primary-black  text-primary-white focus:outline-none"
+                    /></div>
                 <div className="flex gap-2">
                     <button className="flex bg-primary-black border border-primary-yellow text-primary-white rounded-[10%] px-3 py-1">
                         <span>Date  </span>
-                        <img src="/assets/img/CaretDown.png" alt="icon" className="w-5 h-5" />
+                        <img src="/Vector.png" alt="icon" className="mt-2 ml-2 w-3 h-3" />
                     </button>
 
                     <button className="flex bg-primary-black border border-primary-yellow text-primary-white rounded-[10%] px-3 py-1">
                         <span>Date</span>
-                        <img src="/assets/img/CaretDown.png" alt="icon" className="w-5 h-5" />
+                        <img src="/Vector.png" alt="icon" className=" mt-2 ml-2  w-3 h-3" />
                     </button>
                 </div>
             </div>
 
             {/* card part */}
             <section className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-                {shows.map((show, i) => (//index as key
-                    <div key={i} className="bg-primary-black  ">
-                        <p className="text-primary-white text-sm mb-1">{show.date}</p>
-                        <img src={show.img} alt={show.title} className="w-full h-60 object-cover"
-                        />
-                        <div className="p-4 font-dm-sans">
-                            
-                            <p className="text-sm text-light-gray ">{show.category}</p>
-                            <h2 className="text-lg font-bold text-white mt-1 mb-3 leading-snug">
-                                {show.title}
-                            </h2>
+                {shows.map((show, i) => (
+                    <div key={show.id} className="bg-primary-black rounded-xl overflow-hidden hover:bg-[#111] transition">
+                         <Link
+                            to="/show/$showId"
+                            params={{ showId: show.id }}
+                            className="block"
+                        >
+                            <p className="text-primary-white text-sm mb-1">{show.date}</p>
+                            <img
+                                src={show.image_url}
+                                alt={show.title}
+                                className="w-full h-60 object-cover"
+                            />
+                            <div className="p-4 font-dm-sans">
+                                <p className="text-sm text-light-gray">{show.category}</p>
+                                <h2 className="text-lg font-bold text-white mt-1 mb-3 leading-snug">
+                                    {show.title}
+                                </h2>
+                            </div>
+                        </Link>
 
+                        {/* ボタンはカード下に分離 */}
+                        <div className="px-4 pb-4">
                             <button className="bg-primary-yellow text-black font-dm-sans py-2 px-4 rounded-md w-full hover:bg-yellow-300 transition">
                                 Buy Tickets
                             </button>
-
                         </div>
                     </div>
                 ))}
             </section>
+
 
             {/* View Mor */}
             <div className="text-center mt-10">
