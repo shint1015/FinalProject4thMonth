@@ -15,6 +15,7 @@ import Detail from '@/pages/Detail.jsx'
 import Profile from '@/pages/Profile.jsx'
 import MyTickets from '@/pages/MyTicket.jsx'
 import ProfileForm from '@/pages/ProfileForm.jsx'
+import SelectingSeat from '@/pages/SelectingSeat.jsx'
 
 // import { useAuth } from '@/hook/useAuth'
 
