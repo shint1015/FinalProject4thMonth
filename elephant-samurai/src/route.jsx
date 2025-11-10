@@ -57,6 +57,7 @@ const loginRoute = createRoute({
     path: '/login',
     component: () => <LoginPage />,
 })
+
 const routeTree = rootRoute.addChildren([
     indexRoute,
     aboutRoute,
