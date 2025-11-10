@@ -23,6 +23,10 @@ export default function SeatGrid() {
         <div className="text-center mb-4 text-title border rounded-[4px] py-2 px-2 inline-block text-primary-black">Stage</div>
         {rows.map((row) => (
           <div key={row} className="flex justify-center my-[0.5rem] gap-[0.5rem]">
+            {/* rows name */}
+            <div className="w-[1rem] h-[2.375rem] flex items-center justify-center text-body text-primary-black">{row}</div>
+
+            {/* seat */}
             {[...Array(seatsPerRow)].map((_, i) => { //loop every row
               const seatId = `${row}${i + 1}`; // return row name + number 
               const status = TicketSold(seatId)
@@ -39,6 +43,7 @@ export default function SeatGrid() {
                 />
               );
             })}
+            <div className="w-[1rem] h-[2.375rem] flex items-center justify-center text-body text-primary-black">{row}</div>
           </div>
         ))}
     <SeatLegend/>
