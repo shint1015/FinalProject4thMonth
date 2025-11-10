@@ -14,7 +14,7 @@ export default function Seat({ id, status, onSelect }) {
     <button
       onClick={() => onSelect(id)}
       disabled={status === "sold"}
-      className={`w-[34px] h-[38px] rounded-[4px] flex items-center justify-center font-medium transition ${StatusColor()}`}
+      className={`w-[2.2rem] h-[2.5rem] rounded-[4px] flex items-center justify-center text-detail ${StatusColor()}`}
     >
       {status === "sold" ? "X" : id}
     </button>
