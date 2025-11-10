@@ -6,7 +6,7 @@ export default function SeatLegend() {
   ];
 
   return (
-    <div className="flex justify-center gap-4 mt-4">
+    <div className="flex justify-center gap-4 mt-6">
       {legends.map((item) => (
         <div key={item.label} className="flex items-center gap-2">
           <div className={`w-[1.5rem] h-[1.5rem] rounded-[4px] ${item.color}`} />

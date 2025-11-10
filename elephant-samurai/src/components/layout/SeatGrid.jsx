@@ -19,8 +19,8 @@ export default function SeatGrid() {
   const TicketSold = (id) => ["A7", "D5", "E4"].includes(id); // sample of sold seats
 
   return (
-    <div className="flex flex-col items-center justify-center bg-primary-white p-4">
-        <div className="text-center mb-4 text-title border rounded-[4px] py-2 px-4 inline-block text-primary-black">Stage</div>
+    <div className="flex flex-col items-center justify-center bg-primary-white p-4 rounded-[4px]">
+        <div className="text-center mb-4 text-title border rounded-[4px] py-2 px-2 inline-block text-primary-black">Stage</div>
         {rows.map((row) => (
           <div key={row} className="flex justify-center my-[0.5rem] gap-[0.5rem]">
             {[...Array(seatsPerRow)].map((_, i) => { //loop every row
