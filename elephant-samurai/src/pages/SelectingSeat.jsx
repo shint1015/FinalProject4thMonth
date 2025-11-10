@@ -1,6 +1,9 @@
+import { useState } from "react";
 import SeatGrid from '../components/layout/SeatGrid'
 
 export default function SelectingSeat(){
+    const [selectedSeats, setSelectedSeats] = useState([]);
+
     return (
         <>
             <div className='mt-4 px-[2rem] sm:px-[3rem] lg:px-[5rem]'>
@@ -9,12 +12,18 @@ export default function SelectingSeat(){
             </div>
             <div className='my-[2.5rem] flex flex-col lg:flex-row px-[2rem] sm:px-[3rem] lg:px-[5rem]'>
                 <div>
-                    <SeatGrid/>
+                    <SeatGrid
+                        selectedSeats={selectedSeats}
+                        setSelectedSeats={setSelectedSeats}/>
                 </div>
                 <div className='flex justify-center items-center w-full'>
                     <div className='text-center'>
-                        <p className='text-primary-yellow text-subtitle'>Select seat on the maps</p>
-                        <p className='text-primary-white text-subbody'>Your choices will be added here</p>
+                        <p className='text-primary-yellow text-subtitle'>
+                            {selectedSeats.length > 0 ? "Your selection" : "Select seat on the maps"}
+                            </p>
+                        <p className='text-primary-white text-subbody'>
+                            {selectedSeats.length > 0 ? selectedSeats.join(", ") : "Your choices will be added here"}
+                        </p>
                     </div>
                 </div>
             </div>

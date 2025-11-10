@@ -1,12 +1,10 @@
-import { useState } from "react";
+
 import Seat from "./Seat";
 import SeatLegend from './SeatLegend'
 
-export default function SeatGrid() {
+export default function SeatGrid({ selectedSeats, setSelectedSeats }) {
   const rows = ["A", "B", "C", "D", "E", "F", "G", "H", "J"];
   const seatsPerRow = 12;
-
-  const [selectedSeats, setSelectedSeats] = useState([]);
 
   const toggleSeat = (seatId) => {
     setSelectedSeats((prev) =>
