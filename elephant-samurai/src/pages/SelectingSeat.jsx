@@ -20,7 +20,21 @@ export default function SelectingSeat(){
                     <div className='text-center'>
                         <p className='text-primary-yellow text-subtitle'>
                             {selectedSeats.length > 0 ? "Your selection" : "Select seat on the maps"}
-                            </p>
+                        </p>
+                        <div className="text-left">
+                            <p className="text-detail text-primary-white">Price include service fees. Per order payment fees may apply depending on digital payment method used.</p>
+                        </div>
+                        {/* divide line */}
+                        <div class="border-t border-primary-white my-4"></div>
+                        
+                         {/*level  */}
+                         <div className="text-left">
+                            <p className="text-body text-primary-yellow">Level</p>
+                            <p className="text-detail text-primary-white">Floor</p>
+                         </div>
+                         {/* divide line */}
+                        <div class="border-t border-primary-white my-4"></div>
+
                         <p className='text-primary-white text-subbody'>
                             {selectedSeats.length > 0 ? selectedSeats.join(", ") : "Your choices will be added here"}
                         </p>
