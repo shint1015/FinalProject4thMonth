@@ -5,9 +5,10 @@ import { Link } from "@tanstack/react-router";
 export default function ShowPage() {
     const [shows, setShows] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
-    const [categoryFilter, setCategoryFilter] = useState(""); // 選択カテゴリ
-    const [dateFilter, setDateFilter] = useState(""); // 選択日
-
+    const [categoryFilter, setCategoryFilter] = useState(""); // category
+    const [dateFilter, setDateFilter] = useState(""); // date
+    
+    // fetch data
     useEffect(() => {
         fetch("/data/event.json")
             .then((response) => {
