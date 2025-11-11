@@ -1,8 +1,30 @@
 import { useState } from "react";
+// import { useNavigate } from "react-router-dom"; // for go to dashbord
 import SeatGrid from '../components/layout/SeatGrid'
+import Ticket from '../assets/icon/Ticket.svg'
+import Remove from '../assets/icon/Trash.svg'
+
 
 export default function SelectingSeat(){
     const [selectedSeats, setSelectedSeats] = useState([]);
+    const seatPrice = 150; // 1 ticket price
+    const totalPrice = selectedSeats.length * seatPrice; // sumTotal
+    // const navigate = useNavigate();
+    
+    const handleConfirm = () => {
+    const reservation = {
+      showTitle: "DISNEY ON ICE - LET’S DANCE 2025",
+      showDate: "October 29th, 2025",
+      showSeat: selectedSeats,
+      showPrice: totalPrice,
+      showTimeStamp: new Date().toISOString(),
+    };
+
+    localStorage.setItem ("reservation", JSON.stringify(reservation));
+
+    //  link to dashboard
+    // navigate("/profile/dashboard");
+    };
 
     return (
         <>
@@ -10,34 +32,76 @@ export default function SelectingSeat(){
                 <p className='text-title text-primary-yellow'>DISNEY ON ICE - LET’S DANCE 2025</p>
                 <p className='text-subbody text-light-gray'>October 29th, 2025</p>
             </div>
-            <div className='my-[2.5rem] flex flex-col lg:flex-row px-[2rem] sm:px-[3rem] lg:px-[5rem]'>
+            <div className='my-[2.5rem] flex flex-col lg:flex-row px-[2rem] sm:px-[3rem] lg:px-[5rem] gap-20'>
                 <div>
                     <SeatGrid
                         selectedSeats={selectedSeats}
-                        setSelectedSeats={setSelectedSeats}/>
+                        setSelectedSeats={setSelectedSeats}
+                    />
                 </div>
                 <div className='flex justify-center items-center w-full'>
                     <div className='text-center'>
-                        <p className='text-primary-yellow text-subtitle'>
-                            {selectedSeats.length > 0 ? "Your selection" : "Select seat on the maps"}
-                        </p>
-                        <div className="text-left">
-                            <p className="text-detail text-primary-white">Price include service fees. Per order payment fees may apply depending on digital payment method used.</p>
-                        </div>
-                        {/* divide line */}
-                        <div class="border-t border-primary-white my-4"></div>
-                        
-                         {/*level  */}
-                         <div className="text-left">
-                            <p className="text-body text-primary-yellow">Level</p>
-                            <p className="text-detail text-primary-white">Floor</p>
-                         </div>
-                         {/* divide line */}
-                        <div class="border-t border-primary-white my-4"></div>
+                        {/* if seat selected */}
+                        {selectedSeats.length > 0 ? 
+                        <>
+                            <p className='text-primary-yellow text-subtitle'>Your selection</p>
 
-                        <p className='text-primary-white text-subbody'>
-                            {selectedSeats.length > 0 ? selectedSeats.join(", ") : "Your choices will be added here"}
-                        </p>
+                            <div className="text-left">
+                            <p className="text-detail text-primary-white">
+                                {selectedSeats.length > 0 ? "Price include service fees. Per order payment fees may apply depending on digital payment method used.": ""}
+                            </p>
+                            </div>
+
+                            {/* seat info */}
+                            <div className="border-t border-primary-white my-4"></div>
+
+                            {selectedSeats.map((seatId) => {
+                                const row = seatId.charAt(0);
+                                const number = seatId.slice(1);
+                                return (
+                                    <div key={seatId} className="SelectedSeatInfo mb-2">
+                                        <div className="flex flex-row justify-between">
+
+                                            <div className="text-left">
+                                                <p className="text-body text-primary-yellow">Level</p>
+                                                <p className="text-detail text-primary-white">Floor</p>
+                                            </div>
+                                            
+                                            <div className="text-left">
+                                                <p className="text-body text-primary-yellow">Row</p>
+                                                <p className="text-detail text-primary-white">{row}</p>
+                                            </div>
+                                            <div className="text-left">
+                                                <p className="text-body text-primary-yellow">Seat</p>
+                                                <p className="text-detail text-primary-white">{number}</p>
+                                            </div>
+                                            <img src={Remove} alt="Remove seat" 
+                                            className="cursor-pointer hover:opacity-70" 
+                                            onClick={() => setSelectedSeats(prev => prev.filter(id => id !== seatId))}/>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+
+                            {/* ticket amout */}
+                                <div class="border-t border-primary-white my-4"></div>
+                                <div className="flex flex-row items-center gap-1">
+                                    <img src={Ticket}/>
+                                    <p className="text-detail text-primary-white"> x {selectedSeats.length}</p>
+                                </div>
+                                <div className="text-left">
+                                    <p className="text-body text-primary-yellow">${totalPrice.toFixed(2)}</p>
+                                </div>
+                                <button onClick={handleConfirm}
+                                className="bg-primary-yellow text-black py-3 px-6 mt-4 rounded hover:bg-secondary-yellow text-subbody w-full">Select the Seat</button>              
+                        </>
+                        : 
+                        // original
+                        <>
+                            <p className='text-primary-yellow text-subtitle'>Select seat on the maps</p>
+                            <p className="text-detail text-primary-white">Your choices will be added here</p>
+                        </>
+                        }
                     </div>
                 </div>
             </div>
