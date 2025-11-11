@@ -45,7 +45,8 @@ export default function ShowPage() {
 
         const matchesDate =
             !dateFilter ||
-            new Date(show.time).toISOString().split("T")[0] === dateFilter;
+            new Date(show.time.start).toISOString().split("T")[0] === dateFilter;
+
 
         return matchesSearch && matchesCategory && matchesDate;
     });
@@ -79,12 +80,15 @@ export default function ShowPage() {
                     />
                 </div>
 
-                <div className="flex gap-4 ml-[32em]">
+                <div className="flex gap-4 ml-[35%]">
                     {/* Date select */}
                     <input
                         type="date"
                         value={dateFilter}
-                        onChange={(e) => setDateFilter(e.target.value)}
+                        onChange={(e) => {
+                            const selectedDate = e.target.value;
+                            setDateFilter((prev) => prev === selectedDate ? "" : selectedDate);           
+                        }}
                         className="flex bg-primary-black border border-primary-yellow text-primary-white rounded-[10%] px-3 py-1 cursor-pointer focus:outline-none ml-auto"
                     />
 
@@ -94,9 +98,10 @@ export default function ShowPage() {
                         onChange={(e) => setCategoryFilter(e.target.value)}
                         className="flex bg-primary-black border border-primary-yellow text-primary-white rounded-[10%] px-3 py-1 cursor-pointer focus:outline-none appearance-none"
                     >
+                        {/* get categories by map and Set to prevent duplicates for option pads */}
                         <option value="">Categories</option>
                         {[...new Set(shows.map((show) => show.category))].map((category) => (
-                            <option key={category} value={category}>
+                            <option key={category} value={category} className="bg-primary-black border-primary-yellow">
                                 {category}
                             </option>
                         ))}
