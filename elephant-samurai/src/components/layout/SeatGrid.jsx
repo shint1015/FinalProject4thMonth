@@ -2,7 +2,7 @@
 import Seat from "./Seat";
 import SeatLegend from './SeatLegend'
 
-export default function SeatGrid({ selectedSeats, setSelectedSeats }) {
+export default function SeatGrid({ selectedSeats, setSelectedSeats, onSeatSelect }) {
   const rows = ["A", "B", "C", "D", "E", "F", "G", "H", "J"];
   const seatsPerRow = 12;
 
@@ -12,6 +12,12 @@ export default function SeatGrid({ selectedSeats, setSelectedSeats }) {
         ? prev.filter((s) => s !== seatId) // If selected remove from list if not add to it
         : [...prev, seatId]
     );
+
+  if (onSeatSelect) {
+      const row = seatId.charAt(0); //start with A
+      const seatNumber = seatId;// start with 1
+      onSeatSelect(row, seatNumber);
+    }
   };
 
   const TicketSold = (id) => ["A7", "D5", "E4"].includes(id); // sample of sold seats
@@ -22,7 +28,7 @@ export default function SeatGrid({ selectedSeats, setSelectedSeats }) {
         
         <div className="flex flex-col gap-1 lg:gap-2">
           {rows.map((row) => (
-            <div key={row} className="flex justify-center gap-1 lg:gap-2">
+            <div key={row} className="flex justify-center items-center gap-1 lg:gap-2">
               {/* rows name */}
               <div className="w-6 h-8 flex items-center justify-center text-body text-primary-black">{row}</div>
 
