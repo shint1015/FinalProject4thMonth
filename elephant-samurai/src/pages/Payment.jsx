@@ -42,6 +42,10 @@ export default function Payment(){
         navigate({ to:"/confirm/$reservationId", params: {reservationId: updatedReservation.reservationId}});
     }
 
+  const GotoDashboard = () => {
+    navigate({ to: "/profile/dashboard"});
+  }
+
     return (
     <>
         <div className='mt-4 px-[2rem] sm:px-[3rem] lg:px-[5rem] flex justify-between'>
