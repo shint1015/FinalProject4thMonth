@@ -38,25 +38,25 @@ export default function ShowDetail() {
 
   return (
     <div className="bg-primary-black pt-[2em] pb-[3em] flex flex-col justify-center items-center  px-6 text-primary-white font-dm-sans ">
-      <div className=" w-full flex flex-col md:flex-row gap-10 ">
+      <div className=" w-full items-center flex flex-col md:flex-row gap-10 ">
 
-        <div className="ml-20">
+        <div className="lg:ml-20">
           <img
             src={show.image_url}
             alt={show.title}
-            className="w-[21vw] h-auto rounded-lg"
+            className="w-full h-auto lg:w-[21vw] rounded-lg"
           />
         </div>
 
         {/* title */}
-        <div className="flex-1 tracking-[1%]">
-          <h1 className="text-primary-yellow text-title text-detailTitle-weight mb-[-0.2em]">
+        <div className="flex-1">
+          <h1 className="text-primary-yellow text-title text-detailTitle-weight tracking-[1%] mb-[-0.2em]">
             {show.title}
           </h1>
           <p className="text-light-gray text-subbody font-dm-sans mb-8">{show.category}</p>
 
           {/* top  */}
-          <div className="grid grid-cols-2 gap-y-5 font-dm-sans ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-5 font-dm-sans ">
             {/* Date*/}
             <div>
               <p className="text-primary-yellow text-subtitle mb-[-0.1em] font-medium ">Date</p>
@@ -64,30 +64,34 @@ export default function ShowDetail() {
             </div>
 
             {/* Price*/}
-            <div className='relative ml-[-4em]'>
+            <div className='relative lg:ml-[-4em]'>
               <p className="text-primary-yellow text-subtitle mb-[-0.1em] font-medium ">Price</p>
               <p>{show.pricing_rules[0].price}</p>
             </div>
           </div>
 
           {/* bottom  */}
-          <div className='grid grid-cols-2 gap-y-5 font-dm-sans mt-5'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-y-5 font-dm-sans mt-5'>
             {/* Time*/}
             <div className=' relative top-0'>
               <p className="text-primary-yellow text-subtitle mb-[-0.1em] block font-medium">Time</p>
               <p className='block '>{show.showTime} </p>
             </div>
 
-            <div className=' relative ml-[-4em]'>
+            <div className=' relative lg:ml-[-4em]'>
               <p className="text-primary-yellow text-subtitle mb-[-0.1em] font-medium ">Admission Policy</p>
               <p className="block max-w-[20rem]">{show.admission_policy.description}</p>
             </div>
           </div>
 
+
           {/* botton */}
-          <button className="mt-5 w-[22%] bg-primary-yellow text-primary-black  font-dm-sans py-3 px-8 rounded-md hover:bg-secondary-yellow transition">
-            Select the Seat
-          </button>
+          <div className="flex justify-center lg:justify-start">
+            <button className="mt-[10%] w-[50%] lg:mt-[2%]  lg:w-[22%] py-3 bg-primary-yellow text-primary-black font-dm-sans rounded-md hover:bg-secondary-yellow transition">
+              Select the Seat
+            </button>
+          </div>
+
         </div>
       </div>
 

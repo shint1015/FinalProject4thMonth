@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 
 export default function ShowCard({ show }) {
     return (
-        <div className="bg-primary-black rounded-xl overflow-hidden hover:bg-[#111] transition flex flex-col mt-10">
+        <div className="bg-primary-black rounded-xl overflow-hidden flex flex-col mt-10">
             <Link
                 to="/show/$showId"
                 params={{ showId: show.id }}
@@ -13,7 +13,7 @@ export default function ShowCard({ show }) {
                 <img
                     src={show.image_url}
                     alt={show.title}
-                    className="w-full h-80 object-cover"
+                    className="w-full h-auto  object-cover"
                 />
                 <div className="p-4 font-dm-sans grow">
                     <p className="text-sm text-light-gray">{show.category}</p>
