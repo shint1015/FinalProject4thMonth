@@ -4,9 +4,12 @@ import DateIcon from '../assets/icon/Date.svg'
 import TimeIcon from '../assets/icon/Clock.svg'
 import LocationIcon from '../assets/icon/Location.svg'
 import Ticket from '../assets/icon/Ticket.svg'
+import CountDown from "../components/layout/Countdown";
+import { useNavigate } from "@tanstack/react-router"; //link to dashbord
 
 export default function Payment(){
     const [reservation, setReservation] = useState(null); // for call localStorage
+    const navigate = useNavigate();
 
     useEffect(() => {
     const saved = localStorage.getItem("reservation");
@@ -19,13 +22,17 @@ export default function Payment(){
     return <p className="text-body text-primary-white">No reservation found.</p>;
   }
 
+  const GotoDashboard = () => {
+    navigate({ to: "/profile/dashboard"});
+  }
+
     return (
     <>
         <div className='mt-4 px-[2rem] sm:px-[3rem] lg:px-[5rem] flex justify-between'>
             <p className='text-title text-primary-yellow'>Check Out</p>
             <div className="text-right">
                 <p className='text-subtitle text-primary-white'>Time Left</p>
-                <p className='text-title text-primary-white'>02:59</p>
+                <CountDown startMinutes={10} />
             </div>
         </div>
         <div className='my-[2.5rem] flex flex-col lg:flex-row px-[2rem] sm:px-[3rem] lg:px-[5rem] mb-30 gap-10 lg:gap-0'>
@@ -38,15 +45,15 @@ export default function Payment(){
                     <div className="flex flex-col justify-between">
                         <p className='text-body text-primary-white'>{reservation.showTitle}</p>
                         <div className='flex flex-row gap-2 items-center'> 
-                            <img src={DateIcon} className='w-6'/>
+                            <img src={DateIcon} className='w-4 lg:w-6'/>
                             <p className='text-body lg:text-detail text-primary-white'>{reservation.showDate}</p>
                         </div>
                         <div className='flex flex-row gap-2'> 
-                            <img src={TimeIcon} className='w-6 items-center'/>
+                            <img src={TimeIcon} className='w-4 lg:w-6 items-center'/>
                             <p className='text-body lg:text-detail text-primary-white'>8:00pm</p>
                         </div>
                         <div className='flex flex-row gap-2'> 
-                            <img src={LocationIcon} className='w-6 items-center'/>
+                            <img src={LocationIcon} className='w-4 lg:w-6 items-center'/>
                             <div>
                                 <p className='text-body lg:text-detail text-primary-white'>Samarai Elephant Studio Theatre</p>
                                 <p className='text-body lg:text-detail text-dark-gray'>111 Hollywood Street Vancouver BC 0A0 0A0</p>
@@ -83,7 +90,8 @@ export default function Payment(){
             {/* right box */}
             <div className="lg:w-[1/2]">
                 <p className='text-subtitle text-primary-yellow'>Payment</p>
-                <form className="flex flex-col justify-between gap-1">
+                <form className="flex flex-col justify-between gap-1"
+                onSubmit={(e) => { e.preventDefault(); GotoDashboard(); }}>
                     <div>
                         <p className='text-subbody text-primary-white'>Card Number</p>
                         <input type="tel" placeholder="1234 5678 9678 1098" className="bg-primary-white border-none placeholder-dark-grey text-black text-subbody focus:outline-none p-[1rem] rounded-[4px] w-full"/>
@@ -102,7 +110,7 @@ export default function Payment(){
                             <input type="date" placeholder="12/01" className="bg-primary-white border-none placeholder-dark-grey text-black text-subbody focus:outline-none p-[1rem] rounded-[4px] w-full"/>
                         </div>
                     </div>
-                    <button className="bg-primary-yellow text-black py-3 px-6 mt-4 rounded hover:bg-secondary-yellow text-subbody w-full">Place Order</button>
+                    <button type="submit" className="bg-primary-yellow text-black py-3 px-6 mt-4 rounded hover:bg-secondary-yellow text-subbody w-full">Place Order</button>
                 </form>
             </div>
         </div>
