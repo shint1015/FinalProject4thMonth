@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom"; // for go to dashbord
+import { useNavigate } from '@tanstack/react-router'; // for go to payment
 import SeatGrid from '../components/layout/SeatGrid'
 import Ticket from '../assets/icon/Ticket.svg'
 import Remove from '../assets/icon/Trash.svg'
@@ -9,7 +9,7 @@ export default function SelectingSeat(){
     const [selectedSeats, setSelectedSeats] = useState([]);
     const seatPrice = 150; // 1 ticket price
     const totalPrice = selectedSeats.length * seatPrice; // sumTotal
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     
     const handleConfirm = () => {
     const reservation = {
@@ -17,13 +17,14 @@ export default function SelectingSeat(){
       showDate: "October 29th, 2025",
       showSeat: selectedSeats,
       showPrice: totalPrice,
+      showAmount: selectedSeats.length,
       showTimeStamp: new Date().toISOString(),
     };
 
     localStorage.setItem ("reservation", JSON.stringify(reservation));
 
-    //  link to dashboard
-    // navigate("/profile/dashboard");
+    //  link to payment
+    navigate({ to: "/Payment" });
     };
 
     return (
@@ -57,7 +58,7 @@ export default function SelectingSeat(){
 
                             {selectedSeats.map((seatId) => {
                                 const row = seatId.charAt(0);
-                                const number = seatId.slice(1);
+                                const seat = seatId;
                                 return (
                                     <div key={seatId} className="SelectedSeatInfo mb-2">
                                         <div className="flex flex-row justify-between">
@@ -73,7 +74,7 @@ export default function SelectingSeat(){
                                             </div>
                                             <div className="text-left">
                                                 <p className="text-body text-primary-yellow">Seat</p>
-                                                <p className="text-detail text-primary-white">{number}</p>
+                                                <p className="text-detail text-primary-white">{seat}</p>
                                             </div>
                                             <img src={Remove} alt="Remove seat" 
                                             className="cursor-pointer hover:opacity-70" 

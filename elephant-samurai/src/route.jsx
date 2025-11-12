@@ -14,6 +14,7 @@ import ShowPage from '@/pages/ShowPage.jsx'
 import Detail from '@/pages/Detail.jsx' 
 import Profile from '@/pages/Profile.jsx'
 import SelectingSeat from '@/pages/SelectingSeat.jsx'
+import Payment from '@/pages/Payment.jsx'
 
 const rootRoute = createRootRoute({
     component: () => (
@@ -67,6 +68,12 @@ const loginRoute = createRoute({
     component: () => <LoginPage />,
 })
 
+const PaymentRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/Payment',
+    component: () => <Payment/>,
+})
+
 const routeTree = rootRoute.addChildren([
     indexRoute,
     aboutRoute,
@@ -74,7 +81,8 @@ const routeTree = rootRoute.addChildren([
     loginRoute,
     showRoute,
     showDetailRoute,
-    profileRoute
+    profileRoute,
+    PaymentRoute
 ])
 
 export const router = createRouter({
