@@ -117,7 +117,7 @@ export default function Payment(){
                     <div>
                         <p className='text-subbody text-primary-white'>Name On Card</p>
                         <input type="text" 
-                        placeholder="NameEnter" 
+                        placeholder="EnterName" 
                         className="bg-primary-white border-none placeholder-dark-grey text-black text-subbody focus:outline-none p-[1rem] rounded-[4px] w-full"
                         value={cardName} onChange={(e) => setCardName(e.target.value)}
                         />
