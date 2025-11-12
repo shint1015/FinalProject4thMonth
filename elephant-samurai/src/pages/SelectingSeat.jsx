@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from '@tanstack/react-router'; // for go to payment
-import SeatGrid from '../components/layout/SeatGrid'
+import SeatGrid from '../components/layout/SeatCompo/SeatGrid'
 import Ticket from '../assets/icon/Ticket.svg'
 import Remove from '../assets/icon/Trash.svg'
 
@@ -15,14 +15,15 @@ export default function SelectingSeat(){
     const reservation = {
       showTitle: "DISNEY ON ICE - LET’S DANCE 2025",
       showDate: "October 29th, 2025",
+      showTime: "8:00 PM",
       showSeat: selectedSeats,
+      showFee: 5.99,
       showPrice: totalPrice,
       showAmount: selectedSeats.length,
       showTimeStamp: new Date().toISOString(),
     };
 
     localStorage.setItem ("reservation", JSON.stringify(reservation));
-
     //  link to payment
     navigate({ to: "/Payment" });
     };
@@ -48,9 +49,9 @@ export default function SelectingSeat(){
                             <p className='text-primary-yellow text-subtitle'>Your selection</p>
 
                             <div className="text-left">
-                            <p className="text-detail text-primary-white">
-                                {selectedSeats.length > 0 ? "Price include service fees. Per order payment fees may apply depending on digital payment method used.": ""}
-                            </p>
+                                <p className="text-detail text-primary-white">
+                                    {selectedSeats.length > 0 ? "Price include service fees. Per order payment fees may apply depending on digital payment method used.": ""}
+                                </p>
                             </div>
 
                             {/* seat info */}
@@ -62,12 +63,10 @@ export default function SelectingSeat(){
                                 return (
                                     <div key={seatId} className="SelectedSeatInfo mb-2">
                                         <div className="flex flex-row justify-between">
-
                                             <div className="text-left">
                                                 <p className="text-body text-primary-yellow">Level</p>
                                                 <p className="text-detail text-primary-white">Floor</p>
                                             </div>
-                                            
                                             <div className="text-left">
                                                 <p className="text-body text-primary-yellow">Row</p>
                                                 <p className="text-detail text-primary-white">{row}</p>
@@ -77,8 +76,9 @@ export default function SelectingSeat(){
                                                 <p className="text-detail text-primary-white">{seat}</p>
                                             </div>
                                             <img src={Remove} alt="Remove seat" 
-                                            className="cursor-pointer hover:opacity-70" 
-                                            onClick={() => setSelectedSeats(prev => prev.filter(id => id !== seatId))}/>
+                                                className="cursor-pointer hover:opacity-70" 
+                                                onClick={() => setSelectedSeats(prev => prev.filter(id => id !== seatId))}
+                                            />
                                         </div>
                                     </div>
                                 );
