@@ -19,8 +19,8 @@ export default function SeatGrid({ selectedSeats, setSelectedSeats, onSeatSelect
       onSeatSelect(row, seatNumber);
     }
   };
-
-  const TicketSold = (id) => ["A7", "D5", "E4"].includes(id); // sample of sold seats
+  // todo: Add feature for seat status using api or localstorage( if aiya has time ) 
+  const TicketSold = (id) => ["A7", "D5", "E4"].includes(id); 
 
   return (
     <div className="flex flex-col items-center justify-center bg-primary-white p-4 rounded-[4px] overflow-x-auto">

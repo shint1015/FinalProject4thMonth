@@ -14,6 +14,9 @@ import LoginPage from '@/pages/auth/LoginPage.jsx'
 import ShowPage from '@/pages/ShowPage.jsx'
 import Detail from '@/pages/Detail.jsx'
 
+import { useAuth } from '@/hook/useAuth'
+
+// const navigate = useNavigate()
 const rootRoute = createRootRoute({
     component: () => (
         <Layout>
@@ -68,10 +71,18 @@ export const selectingSeatRoute = createRoute({
 // const selectingSeatRoute = createRoute({
 //     getParentRoute: () => rootRoute,
 //     path: '/protected',
-//     beforeLoad: async({navigate}) => {
+//     beforeLoad: async({location}) => {
 //         const {isAuthenticated} = useAuth();
 //         if (!Authenticated){
-//             return <navigate to="/login"/>;
+//             throw redirect({
+//                 to: '/login',
+//                 search: {
+//                 // Use the current location to power a redirect after login
+//                 // (Do not use `router.state.resolvedLocation` as it can
+//                 // potentially lag behind the actual current location)
+//                 redirect: location.href,
+//                 },
+//             })
 //         }
 //         return null;
 //     },

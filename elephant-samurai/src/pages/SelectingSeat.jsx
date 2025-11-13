@@ -40,6 +40,7 @@ export default function SelectingSeat(){
                     showTitle: target.title,
                     showDate: target.date,
                     showTime: target.time.start,
+                    showImage: target.image_url,
                     showFee: 5.99,
                 })
                 setLoading(false)

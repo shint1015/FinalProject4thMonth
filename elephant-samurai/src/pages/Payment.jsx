@@ -49,12 +49,12 @@ export default function Payment(){
                 <CountDown startMinutes={10} />
             </div>
         </div>
-        <div className='my-[2.5rem] flex flex-col lg:flex-row px-[2rem] sm:px-[3rem] lg:px-[5rem] mb-30 gap-10 lg:gap-0'>
+        <div className='my-[2.5rem] flex flex-col lg:flex-row px-[2rem] sm:px-[3rem] lg:px-[5rem] mb-30 gap-10 lg:gap-10 justify-between'>
             {/* left box */}
             <div className="lg:w-[1/2]">
                 <p className='text-subtitle text-primary-yellow'>Order</p>
                 <div className='flex flex-col lg:flex-row gap-4'>
-                    <img src={ShowsPhoto} className='w-1/2 lg:w-1/3'/>
+                    <img src={reservation.showImage} className='w-1/2 lg:w-1/3'/>
                     {/* info box */}
                     <div className="flex flex-col justify-between">
                         <p className='text-body text-primary-white'>{reservation.showTitle}</p>
