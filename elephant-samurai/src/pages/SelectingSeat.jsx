@@ -11,7 +11,6 @@ export default function SelectingSeat(){
     const [selectedSeats, setSelectedSeats] = useState([]);
     const [loading, setLoading] = useState(true)
     const [reservation, setReservation] = useState(null)
-    console.log(showId)
     const seatPrice = 150; // 1 ticket price
     const totalPrice = selectedSeats.length * seatPrice; // sumTotal
     const navigate = useNavigate();
@@ -54,15 +53,15 @@ export default function SelectingSeat(){
     if (loading) {
         return <>Loading...</>
     }
-    if (reservation) {
+    if (!reservation) {
         return <>Show is not exist.</>
     }
 
     return (
         <>
             <div className='mt-4 px-[2rem] sm:px-[3rem] lg:px-[5rem]'>
-                <p className='text-title text-primary-yellow'>DISNEY ON ICE - LET’S DANCE 2025</p>
-                <p className='text-subbody text-light-gray'>October 29th, 2025</p>
+                <p className='text-title text-primary-yellow'>{reservation.showTitle}</p>
+                <p className='text-subbody text-light-gray'>{reservation.showDate}</p>
             </div>
             <div className='my-[2.5rem] flex flex-col lg:flex-row px-[2rem] sm:px-[3rem] lg:px-[5rem] gap-20'>
                 <div>

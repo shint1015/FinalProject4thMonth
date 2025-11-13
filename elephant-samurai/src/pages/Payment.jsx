@@ -78,16 +78,16 @@ export default function Payment(){
                         <div className="flex flex-row justify-between items-center">
                             <div className="flex flex-row items-center gap-1">
                                 <img src={Ticket}/>
-                                <p className="text-body lg:text-detail text-primary-white"> x {reservation.showAmount}</p>
+                                <p className="text-body lg:text-detail text-primary-white"> x {reservation.showTotalTicketAmount}</p>
                             </div>
-                            <p className="text-body lg:text-detail text-primary-white">${reservation.showPrice.toFixed(2)}</p>
+                            <p className="text-body lg:text-detail text-primary-white">${reservation.showTotalPrice.toFixed(2)}</p>
                         </div>
                         <div class="border-t border-primary-white my-4"></div>
 
                         {/* total price */}
                         <div className="flex flex-row justify-between">
                             <p className="text-body lg:text-detail text-primary-white">Subtotal</p>
-                            <p className="text-body lg:text-detail text-primary-white">${reservation.showPrice.toFixed(2)}</p>
+                            <p className="text-body lg:text-detail text-primary-white">${reservation.showTotalPrice}</p>
                         </div>
                         <div className="flex flex-row justify-between">
                             <p className="text-body lg:text-detail text-primary-white">Service Fee</p>
@@ -95,7 +95,7 @@ export default function Payment(){
                         </div>
                         <div className="flex flex-row justify-between">
                             <p className="text-body lg:text-detail text-primary-white">Total</p>
-                            <p className="text-body lg:text-detail text-primary-yellow">${(reservation.showPrice+reservation.showFee).toFixed(2)}</p>
+                            <p className="text-body lg:text-detail text-primary-yellow">${(reservation.showTotalPrice+reservation.showFee).toFixed(2)}</p>
                         </div>                                                      
                     </div>
                 </div>
