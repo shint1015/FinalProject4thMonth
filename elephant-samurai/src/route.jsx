@@ -12,10 +12,7 @@ import About from '@/pages/About.jsx'
 import ContactUS from '@/pages/ContactUs.jsx'
 import LoginPage from '@/pages/auth/LoginPage.jsx'
 import ShowPage from '@/pages/ShowPage.jsx'
-import Detail from '@/pages/Detail.jsx' 
-import Profile from '@/pages/Profile.jsx'
-import SelectingSeat from '@/pages/SelectingSeat.jsx'
-import Payment from '@/pages/Payment.jsx'
+import Detail from '@/pages/Detail.jsx'
 
 import { useAuth } from '@/hook/useAuth'
 
@@ -50,7 +47,7 @@ const contactUsRoute = createRoute({
 const showRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/shows',
-    component: () => <ShowPage/>,
+    component: () => <ShowPage />,
 })
 
 export const showDetailRoute = createRoute({
@@ -64,7 +61,6 @@ export const profileRoute = createRoute({
     path: '/profile',
     component: () => <Profile />,
 });
-
 
 const loginRoute = createRoute({
     getParentRoute: () => rootRoute,
