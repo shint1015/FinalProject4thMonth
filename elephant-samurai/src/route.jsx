@@ -103,7 +103,6 @@ export const myTicketsRoute = createRoute({
   component: () => <MyTickets />,
 })
 
-
 const loginRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/login',
