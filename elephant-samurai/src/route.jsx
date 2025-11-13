@@ -58,7 +58,7 @@ export const showDetailRoute = createRoute({
 
 export const profileRoute = createRoute({
     getParentRoute: () => rootRoute,
-    path: '/profile',
+    path: '/profile/$id',
     component: () => <Profile />,
 });
 
