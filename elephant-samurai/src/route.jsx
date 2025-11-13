@@ -68,11 +68,24 @@ const loginRoute = createRoute({
     component: () => <LoginPage />,
 })
 
-const selectingSeatRoute = createRoute({
+export const selectingSeatRoute = createRoute({
     getParentRoute: () => rootRoute,
-    path: '/seatselecting',
+    path: '/seatselecting/$showId',
     component: () => <SelectingSeat/>,
 })
+
+// const selectingSeatRoute = createRoute({
+//     getParentRoute: () => rootRoute,
+//     path: '/protected',
+//     beforeLoad: async({navigate}) => {
+//         const {isAuthenticated} = useAuth();
+//         if (!Authenticated){
+//             return <navigate to="/login"/>;
+//         }
+//         return null;
+//     },
+//     component: () => <SelectingSeat/>,
+// })
 
 const paymentRoute = createRoute({
     getParentRoute: () => rootRoute,
