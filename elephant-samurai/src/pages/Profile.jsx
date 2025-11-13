@@ -5,6 +5,8 @@ import { Link, useNavigate } from '@tanstack/react-router'
 
 // call default from API to add info in place hodler
 
+// call default from API
+
 export default function Profile(){
     const { user, isLoading, isAuthenticated } = useAuth()
     const navigate = useNavigate()
