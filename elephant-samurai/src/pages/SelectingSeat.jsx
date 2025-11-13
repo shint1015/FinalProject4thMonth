@@ -1,32 +1,62 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from '@tanstack/react-router'; // for go to payment
 import SeatGrid from '../components/layout/SeatCompo/SeatGrid'
 import Ticket from '../assets/icon/Ticket.svg'
 import Remove from '../assets/icon/Trash.svg'
+import {selectingSeatRoute} from '@/route'
 
 
 export default function SelectingSeat(){
+    const {showId} = selectingSeatRoute.useParams();
     const [selectedSeats, setSelectedSeats] = useState([]);
+    const [loading, setLoading] = useState(true)
+    const [reservation, setReservation] = useState(null)
+    console.log(showId)
     const seatPrice = 150; // 1 ticket price
     const totalPrice = selectedSeats.length * seatPrice; // sumTotal
     const navigate = useNavigate();
     
     const handleConfirm = () => {
-    const reservation = {
-      showTitle: "DISNEY ON ICE - LET’S DANCE 2025",
-      showDate: "October 29th, 2025",
-      showTime: "8:00 PM",
-      showSeat: selectedSeats,
-      showFee: 5.99,
-      showPrice: totalPrice,
-      showAmount: selectedSeats.length,
-      showTimeStamp: new Date().toISOString(),
+        const saveReservation = {
+            ...reservation,
+            showSelectedSeat: selectedSeats,
+            showTotalPrice: totalPrice,
+            showTotalTicketAmount: selectedSeats.length,
+            showTimeStamp: new Date().toISOString(),
+        }
+        localStorage.setItem ("reservation", JSON.stringify(saveReservation));
+        //  link to payment
+        navigate({ to: "/Payment" });
     };
 
-    localStorage.setItem ("reservation", JSON.stringify(reservation));
-    //  link to payment
-    navigate({ to: "/Payment" });
-    };
+    useEffect(() => {
+        fetch('/data/event.json')
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok')
+                return response.json()
+            })
+            .then(data => {
+                const target = data.find(item => item.id === showId)
+                setReservation({
+                    showTitle: target.title,
+                    showDate: target.date,
+                    showTime: target.time.start,
+                    showFee: 5.99,
+                })
+                setLoading(false)
+            })
+            .catch(error => {
+                console.error('Error loading show detail:', error)
+                setLoading(false)
+            })
+    }, [])
+
+    if (loading) {
+        return <>Loading...</>
+    }
+    if (reservation) {
+        return <>Show is not exist.</>
+    }
 
     return (
         <>
