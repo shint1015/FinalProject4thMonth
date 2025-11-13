@@ -1,13 +1,13 @@
 export default function ShowFilter({
-    searchTerm,
-    setSearchTerm,
-    categoryFilter,
-    setCategoryFilter,
-    dateFilter,
-    setDateFilter,
-    isCategoryOpen,
-    setIsCategoryOpen,
-    categories,
+  searchTerm,
+  setSearchTerm,
+  categoryFilter,
+  setCategoryFilter,
+  dateFilter,
+  setDateFilter,
+  isCategoryOpen,
+  setIsCategoryOpen,
+  categories,
 }) {
     const handleDateChange = e => {
         setDateFilter(e.target.value)
@@ -78,7 +78,7 @@ export default function ShowFilter({
                         onClick={() => setIsCategoryOpen(!isCategoryOpen)}
                         className='flex items-center justify-between border border-primary-yellow text-primary-white rounded px-4 py-2 text-sm font-dm-sans hover:bg-secondary-yellow hover:text-primary-black transition whitespace-nowrap'
                     >
-                        <span className='truncate max-w-[8rem]'>
+                        <span className='truncate max-w-32'>
                             {categoryFilter || 'Categories'}
                         </span>
                         <svg
