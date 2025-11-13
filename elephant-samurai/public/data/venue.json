@@ -1,0 +1,40 @@
+[
+    {
+        "id": "venue-small-01",
+        "name": "Small Concert Hall",
+        "capacity": 18,
+        "layout": {
+            "rows": ["A", "B"],
+            "cols": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        },
+        "seat_id_format": "{row}{col}",
+        "notes": "Ideal for small acoustic concerts or comedy shows."
+    },
+    {
+        "id": "venue-medium-01",
+        "name": "Midtown Theatre",
+        "capacity": 108,
+        "layout": {
+            "rows": ["A", "B", "C", "D", "E", "F"],
+            "cols": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+        },
+        "seat_id_format": "{row}{col}",
+        "notes": "Medium-sized hall for musicals and plays."
+    },
+    {
+        "id": "venue-large-01",
+        "name": "Downtown Grand Arena",
+        "capacity": 504,
+        "layout": {
+            "sections": ["Orchestra", "Mezzanine", "Balcony"],
+            "rows_per_section": {
+                "Orchestra": ["A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N"],
+                "Mezzanine": ["A", "B", "C", "D", "E", "F", "G", "H"],
+                "Balcony": ["A", "B", "C", "D", "E", "F"]
+            },
+            "cols": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        },
+        "seat_id_format": "{section}-{row}{col}",
+        "notes": "Large-scale venue suitable for ice shows, concerts, and musicals."
+    }
+]

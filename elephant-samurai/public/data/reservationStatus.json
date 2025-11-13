@@ -1,0 +1,33 @@
+[
+    {
+        "code": "available",
+        "label": "Available",
+        "description": "Seat is free and can be selected.",
+        "is_final": false
+    },
+    {
+        "code": "held",
+        "label": "Held",
+        "description": "Temporarily held in cart; auto-expires if not purchased.",
+        "is_final": false,
+        "has_timer": true
+    },
+    {
+        "code": "reserved",
+        "label": "Reserved",
+        "description": "Reserved by user; awaiting payment or confirmation.",
+        "is_final": false
+    },
+    {
+        "code": "sold",
+        "label": "Sold",
+        "description": "Seat has been purchased and is no longer available.",
+        "is_final": true
+    },
+    {
+        "code": "blocked",
+        "label": "Blocked",
+        "description": "Seat cannot be sold (maintenance, house seats, or safety).",
+        "is_final": true
+    }
+]

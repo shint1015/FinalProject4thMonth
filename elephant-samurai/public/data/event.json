@@ -1,0 +1,958 @@
+[
+    {
+        "id": "evt-2025-10-29-disney",
+        "title": "Disnet on Ice – Let’s Dance! 2025",
+        "category": "Musical",
+        "date": "October 29th, 2025",
+        "time": {
+            "start": "2025-10-29T20:00:00",
+            "end": "2025-10-29T22:00:00"
+        },
+        "showTime": "8:00pm",
+        "venue_id": "venue-large-01",
+        "currency": "USD",
+        "pricing_rules": [
+            {
+                "name": "Orchestra VIP Center",
+                "price": "$50 - $200",
+                "applies_to": {
+                    "section": "Orchestra",
+                    "rows": [
+                        "A",
+                        "B",
+                        "C"
+                    ],
+                    "cols": {
+                        "from": 4,
+                        "to": 9
+                    }
+                }
+            },
+            {
+                "name": "Orchestra Premium Side",
+                "price": 150,
+                "applies_to": {
+                    "section": "Orchestra",
+                    "rows": [
+                        "A",
+                        "B",
+                        "C"
+                    ],
+                    "cols": [
+                        1,
+                        2,
+                        3,
+                        10,
+                        11,
+                        12
+                    ]
+                }
+            },
+            {
+                "name": "Orchestra Standard",
+                "price": 120,
+                "applies_to": {
+                    "section": "Orchestra",
+                    "rows": [
+                        "D",
+                        "E",
+                        "F",
+                        "G"
+                    ]
+                }
+            },
+            {
+                "name": "Mezzanine",
+                "price": 90,
+                "applies_to": {
+                    "section": "Mezzanine"
+                }
+            },
+            {
+                "name": "Balcony",
+                "price": 70,
+                "applies_to": {
+                    "section": "Balcony"
+                }
+            }
+        ],
+        "admission_policy": {
+            "description": "This show is suitable for all ages. Children under 5 must be accompanied by an adult."
+        },
+        "image_url": "/disney.png",
+        "cast": [
+            "Mickey Mouse",
+            "Minnie Mouse",
+            "Elsa",
+            "Anna",
+            "Simba",
+            "Cinderella",
+            "Zootopia Ensemble"
+        ],
+        "description": {
+            "summary1": "Step into a magical world where your favorite Disney characters come to life on ice in DISNEY ON ICE – LET’S DANCE 2025! This spectacular musical theatre experience brings together dazzling skating, enchanting storytelling, and breathtaking choreography that will delight audiences of all ages.",
+            "summary2": "Join Mickey, Minnie, and an unforgettable cast of Disney friends as they take you on a journey filled with laughter, adventure, and heartwarming moments. From the whimsical streets of Arendelle with Elsa and Anna, to the vibrant energy of Zootopia, and the timeless magic of Cinderella and The Lion King, every scene is a celebration of music, movement, and imagination.",
+            "summary3": "Featuring state-of-the-art lighting, vibrant costumes, and stunning ice artistry, LET’S DANCE 2025 is more than just a show — it’s a fully immersive experience. Watch in awe as skaters glide and spin in perfect harmony with Disney’s most beloved songs, performing breathtaking routines that combine athleticism with artistry.",
+            "summary4": "Perfect for families, friends, and Disney fans of all ages, this show promises to leave you smiling, singing, and dancing along. Whether it’s your first Disney experience on ice or a cherished tradition, DISNEY ON ICE – LET’S DANCE 2025 delivers unforgettable memories, magical moments, and a celebration of the joy of dance, music, and imagination.",
+            "details": [
+                "Immersive lighting, vibrant costumes, and choreographed routines.",
+                "Family-friendly celebration of music, dance, and imagination."
+            ]
+        },
+        "tags": [
+            "family",
+            "musical",
+            "disney",
+            "ice skating",
+            "live show"
+        ],
+        "status": "available"
+    },
+    {
+        "id": "evt-2025-10-31-maltese",
+        "title": "Matt Maltese – North America tour",
+        "category": "Concert",
+        "date": "October 31st, 2025",
+        "time": {
+            "start": "2025-10-31T19:30:00",
+            "end": "2025-10-31T22:00:00"
+        },
+        "showTime": "8:00 PM",
+        "venue_id": "venue-medium-01",
+        "currency": "USD",
+        "pricing_rules": [
+            {
+                "name": "VIP Front Center",
+                "price": 120,
+                "applies_to": {
+                    "rows": [
+                        "A",
+                        "B"
+                    ],
+                    "cols": {
+                        "from": 6,
+                        "to": 13
+                    }
+                }
+            },
+            {
+                "name": "Premium Front Side",
+                "price": 95,
+                "applies_to": {
+                    "rows": [
+                        "A",
+                        "B"
+                    ],
+                    "cols": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18
+                    ]
+                }
+            },
+            {
+                "name": "Standard Middle",
+                "price": 65,
+                "applies_to": {
+                    "rows": [
+                        "C",
+                        "D"
+                    ]
+                }
+            },
+            {
+                "name": "Balcony/Back",
+                "price": 45,
+                "applies_to": {
+                    "rows": [
+                        "E",
+                        "F"
+                    ]
+                }
+            }
+        ],
+        "admission_policy": {
+            "description": "All ages welcome; under 12 must be with an adult."
+        },
+        "image_url": "/matt.png",
+        "cast": [
+            "Matt Maltese",
+            "Touring Band"
+        ],
+        "description": {
+            "summary1": "Step into a magical world where your favorite Disney characters come to life on ice in DISNEY ON ICE – LET’S DANCE 2025! This spectacular musical theatre experience brings together dazzling skating, enchanting storytelling, and breathtaking choreography that will delight audiences of all ages.",
+            "summary2": "Join Mickey, Minnie, and an unforgettable cast of Disney friends as they take you on a journey filled with laughter, adventure, and heartwarming moments. From the whimsical streets of Arendelle with Elsa and Anna, to the vibrant energy of Zootopia, and the timeless magic of Cinderella and The Lion King, every scene is a celebration of music, movement, and imagination.",
+            "summary3": "Featuring state-of-the-art lighting, vibrant costumes, and stunning ice artistry, LET’S DANCE 2025 is more than just a show — it’s a fully immersive experience. Watch in awe as skaters glide and spin in perfect harmony with Disney’s most beloved songs, performing breathtaking routines that combine athleticism with artistry.",
+            "summary4": "Perfect for families, friends, and Disney fans of all ages, this show promises to leave you smiling, singing, and dancing along. Whether it’s your first Disney experience on ice or a cherished tradition, DISNEY ON ICE – LET’S DANCE 2025 delivers unforgettable memories, magical moments, and a celebration of the joy of dance, music, and imagination.",
+            "details": [
+                "Immersive lighting, vibrant costumes, and choreographed routines.",
+                "Family-friendly celebration of music, dance, and imagination."
+            ]
+        },
+        "tags": [
+            "concert",
+            "indie",
+            "piano"
+        ],
+        "status": "available"
+    },
+    {
+        "id": "evt-2025-11-01-comedy",
+        "title": "Stand Up Comedy – Jokes Please!",
+        "category": "Comedy Show",
+        "date": "November 1st, 2025",
+        "time": {
+            "start": "2025-11-01T19:00:00",
+            "end": "2025-11-01T20:30:00"
+        },
+        "showTime": "7:00 PM",
+        "venue_id": "venue-small-01",
+        "currency": "USD",
+        "pricing_rules": [
+            {
+                "name": "Front Center",
+                "price": 50,
+                "applies_to": {
+                    "rows": [
+                        "A"
+                    ],
+                    "cols": {
+                        "from": 4,
+                        "to": 6
+                    }
+                }
+            },
+            {
+                "name": "Front Side",
+                "price": 40,
+                "applies_to": {
+                    "rows": [
+                        "A"
+                    ],
+                    "cols": [
+                        1,
+                        2,
+                        3,
+                        7,
+                        8,
+                        9
+                    ]
+                }
+            },
+            {
+                "name": "Back Row",
+                "price": 35,
+                "applies_to": {
+                    "rows": [
+                        "B"
+                    ]
+                }
+            }
+        ],
+        "admission_policy": {
+            "description": "Recommended 14+; adult supervision advised."
+        },
+        "image_url": "/standUpComedy.png",
+        "cast": [
+            "Host Comedian",
+            "Feature Acts",
+            "Special Guests"
+        ],
+        "description": {
+            "summary1": "Step into a magical world where your favorite Disney characters come to life on ice in DISNEY ON ICE – LET’S DANCE 2025! This spectacular musical theatre experience brings together dazzling skating, enchanting storytelling, and breathtaking choreography that will delight audiences of all ages.",
+            "summary2": "Join Mickey, Minnie, and an unforgettable cast of Disney friends as they take you on a journey filled with laughter, adventure, and heartwarming moments. From the whimsical streets of Arendelle with Elsa and Anna, to the vibrant energy of Zootopia, and the timeless magic of Cinderella and The Lion King, every scene is a celebration of music, movement, and imagination.",
+            "summary3": "Featuring state-of-the-art lighting, vibrant costumes, and stunning ice artistry, LET’S DANCE 2025 is more than just a show — it’s a fully immersive experience. Watch in awe as skaters glide and spin in perfect harmony with Disney’s most beloved songs, performing breathtaking routines that combine athleticism with artistry.",
+            "summary4": "Perfect for families, friends, and Disney fans of all ages, this show promises to leave you smiling, singing, and dancing along. Whether it’s your first Disney experience on ice or a cherished tradition, DISNEY ON ICE – LET’S DANCE 2025 delivers unforgettable memories, magical moments, and a celebration of the joy of dance, music, and imagination.",
+            "details": [
+                "Immersive lighting, vibrant costumes, and choreographed routines.",
+                "Family-friendly celebration of music, dance, and imagination."
+            ]
+        },
+        "tags": [
+            "comedy",
+            "standup",
+            "nightlife"
+        ],
+        "status": "sold_out"
+    },
+    {
+        "id": "evt-2025-11-03-romeo",
+        "title": "Romeo and Juliet",
+        "category": "Stage Play",
+        "date": "November 3rd, 2025",
+        "time": {
+            "start": "2025-11-03T19:30:00",
+            "end": "2025-11-03T21:50:00"
+        },
+        "showTime": "8:00 PM",
+        "venue_id": "venue-medium-01",
+        "currency": "USD",
+        "pricing_rules": [
+            {
+                "name": "Orchestra Front",
+                "price": 120,
+                "applies_to": {
+                    "rows": [
+                        "A",
+                        "B"
+                    ],
+                    "cols": {
+                        "from": 6,
+                        "to": 13
+                    }
+                }
+            },
+            {
+                "name": "Dress Circle",
+                "price": 95,
+                "applies_to": {
+                    "rows": [
+                        "A",
+                        "B"
+                    ],
+                    "cols": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18
+                    ]
+                }
+            },
+            {
+                "name": "Standard",
+                "price": 70,
+                "applies_to": {
+                    "rows": [
+                        "C",
+                        "D"
+                    ]
+                }
+            },
+            {
+                "name": "Balcony / Back",
+                "price": 40,
+                "applies_to": {
+                    "rows": [
+                        "E",
+                        "F"
+                    ]
+                }
+            }
+        ],
+        "admission_policy": {
+            "description": "Ages 10+ recommended."
+        },
+        "image_url": "/romio.png",
+        "cast": [
+            "Romeo",
+            "Juliet",
+            "Mercutio",
+            "Tybalt",
+            "Nurse",
+            "Friar Lawrence"
+        ],
+        "description": {
+            "summary1": "Step into a magical world where your favorite Disney characters come to life on ice in DISNEY ON ICE – LET’S DANCE 2025! This spectacular musical theatre experience brings together dazzling skating, enchanting storytelling, and breathtaking choreography that will delight audiences of all ages.",
+            "summary2": "Join Mickey, Minnie, and an unforgettable cast of Disney friends as they take you on a journey filled with laughter, adventure, and heartwarming moments. From the whimsical streets of Arendelle with Elsa and Anna, to the vibrant energy of Zootopia, and the timeless magic of Cinderella and The Lion King, every scene is a celebration of music, movement, and imagination.",
+            "summary3": "Featuring state-of-the-art lighting, vibrant costumes, and stunning ice artistry, LET’S DANCE 2025 is more than just a show — it’s a fully immersive experience. Watch in awe as skaters glide and spin in perfect harmony with Disney’s most beloved songs, performing breathtaking routines that combine athleticism with artistry.",
+            "summary4": "Perfect for families, friends, and Disney fans of all ages, this show promises to leave you smiling, singing, and dancing along. Whether it’s your first Disney experience on ice or a cherished tradition, DISNEY ON ICE – LET’S DANCE 2025 delivers unforgettable memories, magical moments, and a celebration of the joy of dance, music, and imagination.",
+            "details": [
+                "Immersive lighting, vibrant costumes, and choreographed routines.",
+                "Family-friendly celebration of music, dance, and imagination."
+            ]
+        },
+        "tags": [
+            "theatre",
+            "shakespeare",
+            "drama"
+        ],
+        "status": "available"
+    },
+    {
+        "id": "evt-2025-11-10-phantom",
+        "title": "The Phantom of the Opera",
+        "category": "Stage Play",
+        "date": "November 10th, 2025",
+        "time": {
+            "start": "2025-11-10T19:00:00",
+            "end": "2025-11-10T22:00:00"
+        },
+        "showTime": "8:00 PM",
+        "venue_id": "venue-medium-01",
+        "currency": "USD",
+        "pricing_rules": [
+            {
+                "name": "VIP Front Center",
+                "price": 180,
+                "applies_to": {
+                    "rows": [
+                        "A"
+                    ],
+                    "cols": {
+                        "from": 7,
+                        "to": 12
+                    }
+                }
+            },
+            {
+                "name": "Premium Front",
+                "price": 120,
+                "applies_to": {
+                    "rows": [
+                        "A",
+                        "B"
+                    ],
+                    "cols": {
+                        "from": 4,
+                        "to": 15
+                    }
+                }
+            },
+            {
+                "name": "Standard Middle",
+                "price": 85,
+                "applies_to": {
+                    "rows": [
+                        "C",
+                        "D"
+                    ]
+                }
+            },
+            {
+                "name": "Balcony/Back",
+                "price": 55,
+                "applies_to": {
+                    "rows": [
+                        "E",
+                        "F"
+                    ]
+                }
+            }
+        ],
+        "admission_policy": {
+            "description": "Fog, flashing lights, and loud effects used."
+        },
+        "image_url": "/thePhantom.png",
+        "cast": [
+            "The Phantom",
+            "Christine Daaé",
+            "Raoul",
+            "Carlotta",
+            "Meg Giry"
+        ],
+        "description": {
+            "summary1": "Step into a magical world where your favorite Disney characters come to life on ice in DISNEY ON ICE – LET’S DANCE 2025! This spectacular musical theatre experience brings together dazzling skating, enchanting storytelling, and breathtaking choreography that will delight audiences of all ages.",
+            "summary2": "Join Mickey, Minnie, and an unforgettable cast of Disney friends as they take you on a journey filled with laughter, adventure, and heartwarming moments. From the whimsical streets of Arendelle with Elsa and Anna, to the vibrant energy of Zootopia, and the timeless magic of Cinderella and The Lion King, every scene is a celebration of music, movement, and imagination.",
+            "summary3": "Featuring state-of-the-art lighting, vibrant costumes, and stunning ice artistry, LET’S DANCE 2025 is more than just a show — it’s a fully immersive experience. Watch in awe as skaters glide and spin in perfect harmony with Disney’s most beloved songs, performing breathtaking routines that combine athleticism with artistry.",
+            "summary4": "Perfect for families, friends, and Disney fans of all ages, this show promises to leave you smiling, singing, and dancing along. Whether it’s your first Disney experience on ice or a cherished tradition, DISNEY ON ICE – LET’S DANCE 2025 delivers unforgettable memories, magical moments, and a celebration of the joy of dance, music, and imagination.",
+            "details": [
+                "Immersive lighting, vibrant costumes, and choreographed routines.",
+                "Family-friendly celebration of music, dance, and imagination."
+            ]
+        },
+        "tags": [
+            "musical",
+            "classic",
+            "orchestra"
+        ],
+        "status": "available"
+    },
+    {
+        "id": "evt-2025-11-14-oor",
+        "title": "ONE OK ROCK – North America tour",
+        "category": "Concert",
+        "date": "November 14th, 2025",
+        "time": {
+            "start": "2025-11-14T20:00:00",
+            "end": "2025-11-14T22:30:00"
+        },
+        "showTime": "8:00 PM",
+        "venue_id": "venue-large-01",
+        "currency": "USD",
+        "pricing_rules": [
+            {
+                "name": "Orchestra VIP Center",
+                "price": 220,
+                "applies_to": {
+                    "section": "Orchestra",
+                    "rows": [
+                        "A",
+                        "B",
+                        "C"
+                    ],
+                    "cols": {
+                        "from": 4,
+                        "to": 9
+                    }
+                }
+            },
+            {
+                "name": "Orchestra Premium Side",
+                "price": 160,
+                "applies_to": {
+                    "section": "Orchestra",
+                    "rows": [
+                        "A",
+                        "B",
+                        "C"
+                    ],
+                    "cols": [
+                        1,
+                        2,
+                        3,
+                        10,
+                        11,
+                        12
+                    ]
+                }
+            },
+            {
+                "name": "Orchestra / Lower Rows",
+                "price": 130,
+                "applies_to": {
+                    "section": "Orchestra",
+                    "rows": [
+                        "D",
+                        "E",
+                        "F",
+                        "G"
+                    ]
+                }
+            },
+            {
+                "name": "Mezzanine Reserved",
+                "price": 95,
+                "applies_to": {
+                    "section": "Mezzanine"
+                }
+            },
+            {
+                "name": "GA Floor Standing",
+                "price": 75,
+                "applies_to": {
+                    "section": "Orchestra",
+                    "rows": [
+                        "H",
+                        "J",
+                        "K",
+                        "L",
+                        "M",
+                        "N"
+                    ]
+                }
+            }
+        ],
+        "admission_policy": {
+            "description": "All ages show."
+        },
+        "image_url": "/oneOkRock.png",
+        "cast": [
+            "Taka",
+            "Toru",
+            "Ryota",
+            "Tomoya"
+        ],
+        "description": {
+            "summary1": "Step into a magical world where your favorite Disney characters come to life on ice in DISNEY ON ICE – LET’S DANCE 2025! This spectacular musical theatre experience brings together dazzling skating, enchanting storytelling, and breathtaking choreography that will delight audiences of all ages.",
+            "summary2": "Join Mickey, Minnie, and an unforgettable cast of Disney friends as they take you on a journey filled with laughter, adventure, and heartwarming moments. From the whimsical streets of Arendelle with Elsa and Anna, to the vibrant energy of Zootopia, and the timeless magic of Cinderella and The Lion King, every scene is a celebration of music, movement, and imagination.",
+            "summary3": "Featuring state-of-the-art lighting, vibrant costumes, and stunning ice artistry, LET’S DANCE 2025 is more than just a show — it’s a fully immersive experience. Watch in awe as skaters glide and spin in perfect harmony with Disney’s most beloved songs, performing breathtaking routines that combine athleticism with artistry.",
+            "summary4": "Perfect for families, friends, and Disney fans of all ages, this show promises to leave you smiling, singing, and dancing along. Whether it’s your first Disney experience on ice or a cherished tradition, DISNEY ON ICE – LET’S DANCE 2025 delivers unforgettable memories, magical moments, and a celebration of the joy of dance, music, and imagination.",
+            "details": [
+                "Immersive lighting, vibrant costumes, and choreographed routines.",
+                "Family-friendly celebration of music, dance, and imagination."
+            ]
+        },
+        "tags": [
+            "rock",
+            "j-rock",
+            "arena"
+        ],
+        "status": "available"
+    },
+    {
+        "id": "evt-2025-11-20-u2",
+        "title": "U2:UV Achtung Baby Live",
+        "category": "Concert",
+        "date": "November 20th, 2025",
+        "time": {
+            "start": "2025-11-20T20:00:00",
+            "end": "2025-11-20T22:30:00"
+        },
+        "showTime": "8:00 PM",
+        "venue_id": "venue-large-01",
+        "currency": "USD",
+        "pricing_rules": [
+            {
+                "name": "VIP Red Zone",
+                "price": 300,
+                "applies_to": {
+                    "section": "Orchestra",
+                    "rows": [
+                        "A",
+                        "B"
+                    ],
+                    "cols": {
+                        "from": 5,
+                        "to": 8
+                    }
+                }
+            },
+            {
+                "name": "Floor",
+                "price": 160,
+                "applies_to": {
+                    "section": "Orchestra",
+                    "rows": [
+                        "C",
+                        "D",
+                        "E",
+                        "F"
+                    ]
+                }
+            },
+            {
+                "name": "Lower Bowl",
+                "price": 120,
+                "applies_to": {
+                    "section": "Mezzanine"
+                }
+            },
+            {
+                "name": "Upper Deck",
+                "price": 85,
+                "applies_to": {
+                    "section": "Balcony"
+                }
+            }
+        ],
+        "admission_policy": {
+            "description": "Strobe/laser effects used."
+        },
+        "image_url": "/U2UV.png",
+        "cast": [
+            "Bono",
+            "The Edge",
+            "Adam Clayton",
+            "Larry Mullen Jr."
+        ],
+        "description": {
+            "summary1": "Step into a magical world where your favorite Disney characters come to life on ice in DISNEY ON ICE – LET’S DANCE 2025! This spectacular musical theatre experience brings together dazzling skating, enchanting storytelling, and breathtaking choreography that will delight audiences of all ages.",
+            "summary2": "Join Mickey, Minnie, and an unforgettable cast of Disney friends as they take you on a journey filled with laughter, adventure, and heartwarming moments. From the whimsical streets of Arendelle with Elsa and Anna, to the vibrant energy of Zootopia, and the timeless magic of Cinderella and The Lion King, every scene is a celebration of music, movement, and imagination.",
+            "summary3": "Featuring state-of-the-art lighting, vibrant costumes, and stunning ice artistry, LET’S DANCE 2025 is more than just a show — it’s a fully immersive experience. Watch in awe as skaters glide and spin in perfect harmony with Disney’s most beloved songs, performing breathtaking routines that combine athleticism with artistry.",
+            "summary4": "Perfect for families, friends, and Disney fans of all ages, this show promises to leave you smiling, singing, and dancing along. Whether it’s your first Disney experience on ice or a cherished tradition, DISNEY ON ICE – LET’S DANCE 2025 delivers unforgettable memories, magical moments, and a celebration of the joy of dance, music, and imagination.",
+            "details": [
+                "Immersive lighting, vibrant costumes, and choreographed routines.",
+                "Family-friendly celebration of music, dance, and imagination."
+            ]
+        },
+        "tags": [
+            "rock",
+            "legacy act",
+            "stadium"
+        ],
+        "status": "available"
+    },
+    {
+        "id": "evt-2025-11-28-frozen",
+        "title": "Frozen The Hit Broadway Musical",
+        "category": "Musical",
+        "date": "November 28th, 2025",
+        "time": {
+            "start": "2025-11-28T18:30:00",
+            "end": "2025-11-28T20:30:00"
+        },
+        "showTime": "7:30 PM",
+        "venue_id": "venue-large-01",
+        "currency": "USD",
+        "pricing_rules": [
+            {
+                "name": "VIP Aisle Front",
+                "price": 160,
+                "applies_to": {
+                    "section": "Orchestra",
+                    "rows": [
+                        "A",
+                        "B"
+                    ],
+                    "cols": {
+                        "from": 4,
+                        "to": 9
+                    }
+                }
+            },
+            {
+                "name": "Premium Orchestra",
+                "price": 110,
+                "applies_to": {
+                    "section": "Orchestra",
+                    "rows": [
+                        "C",
+                        "D",
+                        "E"
+                    ]
+                }
+            },
+            {
+                "name": "Standard Mezzanine",
+                "price": 75,
+                "applies_to": {
+                    "section": "Mezzanine"
+                }
+            },
+            {
+                "name": "Family Balcony",
+                "price": 45,
+                "applies_to": {
+                    "section": "Balcony"
+                }
+            }
+        ],
+        "admission_policy": {
+            "description": "All ages. Booster seats available while supplies last."
+        },
+        "image_url": "/frozen.png",
+        "cast": [
+            "Elsa",
+            "Anna",
+            "Kristoff",
+            "Olaf",
+            "Hans",
+            "Sven Ensemble"
+        ],
+        "description": {
+            "summary1": "Step into a magical world where your favorite Disney characters come to life on ice in DISNEY ON ICE – LET’S DANCE 2025! This spectacular musical theatre experience brings together dazzling skating, enchanting storytelling, and breathtaking choreography that will delight audiences of all ages.",
+            "summary2": "Join Mickey, Minnie, and an unforgettable cast of Disney friends as they take you on a journey filled with laughter, adventure, and heartwarming moments. From the whimsical streets of Arendelle with Elsa and Anna, to the vibrant energy of Zootopia, and the timeless magic of Cinderella and The Lion King, every scene is a celebration of music, movement, and imagination.",
+            "summary3": "Featuring state-of-the-art lighting, vibrant costumes, and stunning ice artistry, LET’S DANCE 2025 is more than just a show — it’s a fully immersive experience. Watch in awe as skaters glide and spin in perfect harmony with Disney’s most beloved songs, performing breathtaking routines that combine athleticism with artistry.",
+            "summary4": "Perfect for families, friends, and Disney fans of all ages, this show promises to leave you smiling, singing, and dancing along. Whether it’s your first Disney experience on ice or a cherished tradition, DISNEY ON ICE – LET’S DANCE 2025 delivers unforgettable memories, magical moments, and a celebration of the joy of dance, music, and imagination.",
+            "details": [
+                "Immersive lighting, vibrant costumes, and choreographed routines.",
+                "Family-friendly celebration of music, dance, and imagination."
+            ]
+        },
+        "tags": [
+            "family",
+            "disney",
+            "broadway",
+            "musical"
+        ],
+        "status": "available"
+    },
+    {
+        "id": "evt-2025-10-29-disneycopy",
+        "title": "Disnet on Ice – Let’s Dance! 2025",
+        "category": "Musical",
+        "date": "October 29th, 2025",
+        "time": {
+            "start": "2025-10-29T20:00:00",
+            "end": "2025-10-29T22:00:00"
+        },
+        "showTime": "8:00pm",
+        "venue_id": "venue-large-01",
+        "currency": "USD",
+        "pricing_rules": [
+            {
+                "name": "Orchestra VIP Center",
+                "price": "$50 - $200",
+                "applies_to": {
+                    "section": "Orchestra",
+                    "rows": [
+                        "A",
+                        "B",
+                        "C"
+                    ],
+                    "cols": {
+                        "from": 4,
+                        "to": 9
+                    }
+                }
+            },
+            {
+                "name": "Orchestra Premium Side",
+                "price": 150,
+                "applies_to": {
+                    "section": "Orchestra",
+                    "rows": [
+                        "A",
+                        "B",
+                        "C"
+                    ],
+                    "cols": [
+                        1,
+                        2,
+                        3,
+                        10,
+                        11,
+                        12
+                    ]
+                }
+            },
+            {
+                "name": "Orchestra Standard",
+                "price": 120,
+                "applies_to": {
+                    "section": "Orchestra",
+                    "rows": [
+                        "D",
+                        "E",
+                        "F",
+                        "G"
+                    ]
+                }
+            },
+            {
+                "name": "Mezzanine",
+                "price": 90,
+                "applies_to": {
+                    "section": "Mezzanine"
+                }
+            },
+            {
+                "name": "Balcony",
+                "price": 70,
+                "applies_to": {
+                    "section": "Balcony"
+                }
+            }
+        ],
+        "admission_policy": {
+            "description": "This show is suitable for all ages. Children under 5 must be accompanied by an adult."
+        },
+        "image_url": "/disney.png",
+        "cast": [
+            "Mickey Mouse",
+            "Minnie Mouse",
+            "Elsa",
+            "Anna",
+            "Simba",
+            "Cinderella",
+            "Zootopia Ensemble"
+        ],
+        "description": {
+            "summary1": "Step into a magical world where your favorite Disney characters come to life on ice in DISNEY ON ICE – LET’S DANCE 2025! This spectacular musical theatre experience brings together dazzling skating, enchanting storytelling, and breathtaking choreography that will delight audiences of all ages.",
+            "summary2": "Join Mickey, Minnie, and an unforgettable cast of Disney friends as they take you on a journey filled with laughter, adventure, and heartwarming moments. From the whimsical streets of Arendelle with Elsa and Anna, to the vibrant energy of Zootopia, and the timeless magic of Cinderella and The Lion King, every scene is a celebration of music, movement, and imagination.",
+            "summary3": "Featuring state-of-the-art lighting, vibrant costumes, and stunning ice artistry, LET’S DANCE 2025 is more than just a show — it’s a fully immersive experience. Watch in awe as skaters glide and spin in perfect harmony with Disney’s most beloved songs, performing breathtaking routines that combine athleticism with artistry.",
+            "summary4": "Perfect for families, friends, and Disney fans of all ages, this show promises to leave you smiling, singing, and dancing along. Whether it’s your first Disney experience on ice or a cherished tradition, DISNEY ON ICE – LET’S DANCE 2025 delivers unforgettable memories, magical moments, and a celebration of the joy of dance, music, and imagination.",
+            "details": [
+                "Immersive lighting, vibrant costumes, and choreographed routines.",
+                "Family-friendly celebration of music, dance, and imagination."
+            ]
+        },
+        "tags": [
+            "family",
+            "musical",
+            "disney",
+            "ice skating",
+            "live show"
+        ],
+        "status": "available"
+    },
+    {
+        "id": "evt-2025-10-31-maltesecopy",
+        "title": "Matt Maltese – North America tour",
+        "category": "Concert",
+        "date": "October 31st, 2025",
+        "time": {
+            "start": "2025-10-31T19:30:00",
+            "end": "2025-10-31T22:00:00"
+        },
+        "showTime": "8:00 PM",
+        "venue_id": "venue-medium-01",
+        "currency": "USD",
+        "pricing_rules": [
+            {
+                "name": "VIP Front Center",
+                "price": 120,
+                "applies_to": {
+                    "rows": [
+                        "A",
+                        "B"
+                    ],
+                    "cols": {
+                        "from": 6,
+                        "to": 13
+                    }
+                }
+            },
+            {
+                "name": "Premium Front Side",
+                "price": 95,
+                "applies_to": {
+                    "rows": [
+                        "A",
+                        "B"
+                    ],
+                    "cols": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18
+                    ]
+                }
+            },
+            {
+                "name": "Standard Middle",
+                "price": 65,
+                "applies_to": {
+                    "rows": [
+                        "C",
+                        "D"
+                    ]
+                }
+            },
+            {
+                "name": "Balcony/Back",
+                "price": 45,
+                "applies_to": {
+                    "rows": [
+                        "E",
+                        "F"
+                    ]
+                }
+            }
+        ],
+        "admission_policy": {
+            "description": "All ages welcome; under 12 must be with an adult."
+        },
+        "image_url": "/matt.png",
+        "cast": [
+            "Matt Maltese",
+            "Touring Band"
+        ],
+        "description": {
+            "summary1": "Step into a magical world where your favorite Disney characters come to life on ice in DISNEY ON ICE – LET’S DANCE 2025! This spectacular musical theatre experience brings together dazzling skating, enchanting storytelling, and breathtaking choreography that will delight audiences of all ages.",
+            "summary2": "Join Mickey, Minnie, and an unforgettable cast of Disney friends as they take you on a journey filled with laughter, adventure, and heartwarming moments. From the whimsical streets of Arendelle with Elsa and Anna, to the vibrant energy of Zootopia, and the timeless magic of Cinderella and The Lion King, every scene is a celebration of music, movement, and imagination.",
+            "summary3": "Featuring state-of-the-art lighting, vibrant costumes, and stunning ice artistry, LET’S DANCE 2025 is more than just a show — it’s a fully immersive experience. Watch in awe as skaters glide and spin in perfect harmony with Disney’s most beloved songs, performing breathtaking routines that combine athleticism with artistry.",
+            "summary4": "Perfect for families, friends, and Disney fans of all ages, this show promises to leave you smiling, singing, and dancing along. Whether it’s your first Disney experience on ice or a cherished tradition, DISNEY ON ICE – LET’S DANCE 2025 delivers unforgettable memories, magical moments, and a celebration of the joy of dance, music, and imagination.",
+            "details": [
+                "Immersive lighting, vibrant costumes, and choreographed routines.",
+                "Family-friendly celebration of music, dance, and imagination."
+            ]
+        },
+        "tags": [
+            "concert",
+            "indie",
+            "piano"
+        ],
+        "status": "available"
+    }
+
+]
