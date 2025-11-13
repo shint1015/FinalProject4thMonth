@@ -24,7 +24,7 @@ export default function Header() {
                             </Link>
                         </li>
                         <li>
-                            <Link to='/show' className='text-primary-white hover:text-primary-gray'>
+                            <Link to='/shows' className='text-primary-white hover:text-primary-gray'>
                                 Show
                             </Link>
                         </li>
@@ -82,7 +82,7 @@ export default function Header() {
                     </li>
                     <li>
                         <Link
-                            to='/show'
+                            to='/shows'
                             onClick={toggleMobileMenu}
                             className='text-primary-white hover:text-primary-gray'
                         >
