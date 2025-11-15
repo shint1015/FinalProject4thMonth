@@ -127,7 +127,6 @@ const routeTree = rootRoute.addChildren([
     profileRoute.addChildren([myTicketsRoute,profileFormRoute]),
     selectingSeatRoute,
     paymentRoute,
-    profileRoute.addChildren([myTicketsRoute,profileFormRoute])
 ])
 
 export const router = createRouter({
