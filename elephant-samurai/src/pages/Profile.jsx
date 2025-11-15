@@ -14,6 +14,7 @@ export default function Profile(){
     const handleSubmit = (e) => {
         e.preventDefault();
         updateProfile(inputUser)
+        localStorage.setItem("user",JSON.stringify(inputUser));
         setPopUP(true)
     };
 
