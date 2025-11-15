@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import { useAuth } from '@/hook/useAuth'
 import checkMark from '@/assets/icon/CheckCircle_white.svg'
-import { Link, useNavigate } from '@tanstack/react-router'
 
 export default function Profile(){
     const [popUp, setPopUP] = useState(false);
-    const { user, isLoading, isAuthenticated, updateProfile } = useAuth()
-    const navigate = useNavigate()
+    const { user, updateProfile } = useAuth()
     const [inputUser, setInputUser] = useState({ ...user });
 
     // for popup text
@@ -16,15 +14,6 @@ export default function Profile(){
         localStorage.setItem("user",JSON.stringify(inputUser));
         setPopUP(true)
     };
-
-    // wait until this page get user info
-    if (isLoading) {
-        return <>loading...</>
-    }
-    // if user dont login, redirect to top page
-    if (!isAuthenticated) {
-        navigate({ to: '/' })
-    }
 
     return (
         <>

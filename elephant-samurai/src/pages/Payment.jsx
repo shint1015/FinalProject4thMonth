@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"; 
-import ShowsPhoto from '../assets/img/DisneyOnIce.png'
 import DateIcon from '../assets/icon/Date.svg'
 import TimeIcon from '../assets/icon/Clock.svg'
 import LocationIcon from '../assets/icon/Location.svg'
@@ -37,7 +36,7 @@ export default function Payment(){
             paymentInfo,
         };
         localStorage.setItem("reservation", JSON.stringify(updatedReservation)); //link both ticket + payment to dashboard
-        navigate({ to:"/profile/dashboard"});
+        navigate({ to:"/profile/mytickets"});
     }
 
     return (
