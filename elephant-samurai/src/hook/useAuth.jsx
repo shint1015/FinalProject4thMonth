@@ -71,6 +71,7 @@ export function AuthProvider({ children }) {
         user: currentUser,
         isAuthenticated: authStatus === 'authenticated',
         isLoading: authStatus === 'loading',
+        isAdmin: currentUser?.role === 'admin',
         error: authError,
         signIn,
         signOut,
@@ -92,6 +93,6 @@ export function useAuth() {
             console.log('useAuth called - validating session...')
             context.validateSession(token)
         }
-    })
+    }, [])
     return context
 }

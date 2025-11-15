@@ -8,19 +8,25 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import UserCircle from '@/assets/icon/UserCircle.svg'
 
 export default function Header() {
-    const { user, isAuthenticated, signOut } = useAuth()
+    const { user, isAuthenticated, isAdmin, signOut } = useAuth()
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(undefined)
     const toggleMobileMenu = () => {
         setMobileMenuOpen(prev => !prev)
     }
+    const adminUrls = [
+        { href: '/admin/show/list', label: 'Shows' },
+        { href: '/admin/user/list', label: 'Users' },
+        { href: '/admin/reservation/list', label: 'Reservations' },
+        { href: '/admin/venue/list', label: 'Venues' },
+    ]
 
     return (
         <header className='flex items-center justify-between py-2 px-4 font-extralight'>
-            <div className='flex items-center justify-between w-[60%] lg:w-[45%] xl:w-[33%]'>
+            <div className='flex items-center justify-between w-[75%] lg:w-[55%] xl:w-[45%]'>
                 <div className='logo-container'>
                     <img src={logo} alt='Elephant Samurai Logo' className='h-7 sm:h-14' />
                 </div>
-                <nav className='sm:block hidden w-[80%]'>
+                <nav className='sm:flex gap-x-6 hidden w-[80%] items-center'>
                     <ul className='flex space-x-8 text-center'>
                         <li>
                             <Link to='/' className='text-primary-white hover:text-primary-gray'>
@@ -28,7 +34,10 @@ export default function Header() {
                             </Link>
                         </li>
                         <li>
-                            <Link to='/shows' className='text-primary-white hover:text-primary-gray'>
+                            <Link
+                                to='/shows'
+                                className='text-primary-white hover:text-primary-gray'
+                            >
                                 Show
                             </Link>
                         </li>
@@ -49,6 +58,29 @@ export default function Header() {
                             </Link>
                         </li>
                     </ul>
+                    {isAdmin && (
+                        <>
+                            <Menu>
+                                <MenuButton className='inline-flex items-center rounded-md bg-gray-800 px-3 py-1.5 text-sm/6 font-semibold text-primary-white shadow-inner shadow-white/10 focus:not-data-focus:outline-none data-focus:outline data-focus:outline-white data-hover:bg-gray-700 data-open:bg-gray-700'>
+                                    Admin Menu
+                                </MenuButton>
+                                <MenuItems
+                                    transition
+                                    anchor='bottom end'
+                                    className='z-100 w-52 origin-top-right rounded-xl border border-white/5 bg-primary-black p-1 text-sm/6 text-white transition duration-100 ease-out [--anchor-gap:--spacing(1)] focus:outline-none data-closed:scale-95 data-closed:opacity-0'
+                                >
+                                    {adminUrls.map(link => (
+                                        <MenuItem
+                                            key={link.href}
+                                            className='text-right block data-focus:bg-secondary-yellow data-focus:text-primary-black px-3 py-2'
+                                        >
+                                            <Link to={link.href}>{link.label}</Link>
+                                        </MenuItem>
+                                    ))}
+                                </MenuItems>
+                            </Menu>
+                        </>
+                    )}
                 </nav>
             </div>
             <div>
@@ -157,6 +189,49 @@ export default function Header() {
                         </Link>
                     </li>
                 </ul>
+                {isAdmin && (
+                    <>
+                        <div className='text-[1.25rem] mt-4 p-3 text-center'>Admin</div>
+                        <ul className='flex flex-col space-y-4 items-center'>
+                            <li>
+                                <Link
+                                    to='/admin/show/list'
+                                    onClick={toggleMobileMenu}
+                                    className='text-primary-white hover:text-primary-yellow'
+                                >
+                                    Show
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to='/admin/user/list'
+                                    onClick={toggleMobileMenu}
+                                    className='text-primary-white hover:text-primary-yellow'
+                                >
+                                    User
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to='/admin/reservation/list'
+                                    onClick={toggleMobileMenu}
+                                    className='text-primary-white hover:text-primary-yellow'
+                                >
+                                    Reservation
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to='/admin/venue/list'
+                                    onClick={toggleMobileMenu}
+                                    className='text-primary-white hover:text-primary-yellow'
+                                >
+                                    Venue
+                                </Link>
+                            </li>
+                        </ul>
+                    </>
+                )}
                 <div className='text-[1.25rem] mt-4 p-3 text-center'>Account</div>
                 <ul className='flex flex-col space-y-4 items-center'>
                     {isAuthenticated && user ? (
