@@ -14,6 +14,8 @@ import ShowPage from '@/pages/ShowPage.jsx'
 import Detail from '@/pages/Detail.jsx' 
 import SelectingSeat from '@/pages/SelectingSeat.jsx'
 import Payment from '@/pages/Payment.jsx'
+import { redirect } from '@tanstack/react-router'
+
 
 import { useAuth } from '@/hook/useAuth'
 
@@ -65,6 +67,16 @@ const loginRoute = createRoute({
 })
 
 export const selectingSeatRoute = createRoute({
+    beforeLoad: async ({ context, location }) => {
+        if (!context.auth.isAuthenticated) {
+            throw redirect({
+                to: '/login',
+                search: {
+                    redirect: location.href,
+                },
+            })
+        }
+    },
     getParentRoute: () => rootRoute,
     path: '/seatselecting/$showId',
     component: () => <SelectingSeat/>,
@@ -92,6 +104,16 @@ export const selectingSeatRoute = createRoute({
 // })
 
 const paymentRoute = createRoute({
+    beforeLoad: async ({ context, location }) => {
+        if (!context.auth.isAuthenticated) {
+            throw redirect({
+                to: '/login',
+                search: {
+                    redirect: location.href,
+                },
+            })
+        }
+    },
     getParentRoute: () => rootRoute,
     path: '/payment',
     component: () => <Payment/>,
@@ -119,3 +141,4 @@ export default router
 //         router: typeof router
 //     }
 // }
+
