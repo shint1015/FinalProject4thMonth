@@ -243,6 +243,7 @@ const routeTree = rootRoute.addChildren([
     confirmRoute,
 ])
 
+
 export const router = createRouter({
     routeTree,
     notFoundRoute,

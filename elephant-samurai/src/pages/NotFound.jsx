@@ -1,4 +1,5 @@
 import Group from "@/assets/icon/Group.png";
+import { Link } from "@tanstack/react-router";
 
 export default function notFound() {
     return (
@@ -9,9 +10,9 @@ export default function notFound() {
             <p className="text-body mb-8 text-center">
                 Sorry, We could’t find the page you were looking for
             </p>
-            <a href="/" className="text-subbody bg-primary-yellow text-primary-black px-[3.5%] py-3 rounded-[5%]  hover:bg-secondary-yellow transition">
+            <Link href="/Home" className="text-subbody bg-primary-yellow text-primary-black px-[3.5%] py-3 rounded-[5%]  hover:bg-secondary-yellow transition">
                 Back To  Home
-            </a>
+            </Link>
         </div>
     );
 }
