@@ -9,6 +9,8 @@ import Layout from './Layout.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import ContactUS from './pages/ContactUs.jsx'
+import Confirm from './pages/Confirm.jsx'
+import NotFound from './pages/NotFound.jsx'
 
 const rootRoute = createRootRoute({
     component: () => (
@@ -43,11 +45,25 @@ const contactUsRoute = createRoute({
     component: () => <ContactUS/>,
 })
 
+const confirmRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/confirm',
+    component: () => <Confirm/>,
+})
+
+const NotFoundRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/NotFound',
+    component: () => <NotFound/>,
+})
+
 const routeTree = rootRoute.addChildren([
     indexRoute,
     testRoute,
     aboutRoute,
-    contactUsRoute
+    contactUsRoute,
+    confirmRoute,
+    NotFoundRoute
 ])
 
 export const router = createRouter({
