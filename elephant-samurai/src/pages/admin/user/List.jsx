@@ -3,6 +3,7 @@ import { Link } from '@tanstack/react-router'
 import { Th, Td } from '@/components/admin/Table.jsx'
 import DeleteIcon from '@/components/icons/DeleteIcon.jsx'
 import { mockUsers } from '@/mock/authApi.js'
+import EditIcon from '@/components/icons/EditIcon.jsx'
 
 export default function UserList() {
     const [items, setItems] = useState([])
@@ -119,16 +120,7 @@ export default function UserList() {
                                             title='Edit'
                                             aria-label='Edit user'
                                         >
-                                            <svg
-                                                xmlns='http://www.w3.org/2000/svg'
-                                                viewBox='0 0 24 24'
-                                                fill='none'
-                                                stroke='currentColor'
-                                                strokeWidth='1.5'
-                                                className='h-4 w-4'
-                                            >
-                                                <path d='M16.862 3.487a2.125 2.125 0 1 1 3.004 3.004L7.5 18.856 3 19.999l1.143-4.5 12.719-12.012z' />
-                                            </svg>
+                                            <EditIcon color='#060606' />
                                         </Link>
                                         <button
                                             type='button'
