@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router"
 import DateIcon from '../assets/icon/Date.svg'
 import TimeIcon from '../assets/icon/Clock.svg'
 import LocationIcon from '../assets/icon/Location.svg'
@@ -8,6 +9,7 @@ export default function MyTickets() {
     const [myTickets, setMyTickets] = useState([]);
     useEffect(() => {
         const saved = JSON.parse(localStorage.getItem("reservations")) || [];
+        console.log(saved)
         setMyTickets(saved);
     }, []);
 
@@ -49,7 +51,11 @@ export default function MyTickets() {
                                 </div>
                                 {/* paid */}
                                 <p className="text-body lg:text-detail text-dark-gray">Card ending in **** **** **** {reservation.paymentInfo.cardNumber.slice(-4)} </p>
-                                <button type="submit" className="bg-primary-yellow text-black py-3 px-6 rounded hover:bg-secondary-yellow text-subbody mt-4 w-1/2">View Detail</button>
+                                <Link to='/show/$showId' params={{ showId: reservation.showId }} className='block'>
+                                    <button className="bg-primary-yellow text-black py-3 px-6 rounded hover:bg-secondary-yellow text-subbody mt-4 w-1/2">
+                                        View Detail
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

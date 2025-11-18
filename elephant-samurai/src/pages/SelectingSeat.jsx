@@ -37,6 +37,8 @@ export default function SelectingSeat(){
             .then(data => {
                 const target = data.find(item => item.id === showId)
                 setReservation({
+                    reservationId: crypto.randomUUID(),
+                    showId: target.id,
                     showTitle: target.title,
                     showDate: target.date,
                     showTime: target.time.start,
