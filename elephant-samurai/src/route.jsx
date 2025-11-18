@@ -11,8 +11,15 @@ import About from '@/pages/About.jsx'
 import ContactUS from '@/pages/ContactUs.jsx'
 import LoginPage from '@/pages/auth/LoginPage.jsx'
 import ShowPage from '@/pages/ShowPage.jsx'
-import Detail from '@/pages/Detail.jsx'
+import Detail from '@/pages/Detail.jsx' 
+import SelectingSeat from '@/pages/SelectingSeat.jsx'
+import Payment from '@/pages/Payment.jsx'
+import { redirect } from '@tanstack/react-router'
 
+
+import { useAuth } from '@/hook/useAuth'
+
+// const navigate = useNavigate()
 const rootRoute = createRootRoute({
     component: () => (
         <Layout>
@@ -57,6 +64,39 @@ const loginRoute = createRoute({
     path: '/login',
     component: () => <LoginPage />,
 })
+
+export const selectingSeatRoute = createRoute({
+    beforeLoad: async ({ context, location }) => {
+        if (!context.auth.isAuthenticated) {
+            throw redirect({
+                to: '/login',
+                search: {
+                    redirect: location.href,
+                },
+            })
+        }
+    },
+    getParentRoute: () => rootRoute,
+    path: '/seatselecting/$showId',
+    component: () => <SelectingSeat/>,
+})
+
+const paymentRoute = createRoute({
+    beforeLoad: async ({ context, location }) => {
+        if (!context.auth.isAuthenticated) {
+            throw redirect({
+                to: '/login',
+                search: {
+                    redirect: location.href,
+                },
+            })
+        }
+    },
+    getParentRoute: () => rootRoute,
+    path: '/payment',
+    component: () => <Payment/>,
+})
+
 const routeTree = rootRoute.addChildren([
     indexRoute,
     aboutRoute,
@@ -64,6 +104,8 @@ const routeTree = rootRoute.addChildren([
     loginRoute,
     showRoute,
     showDetailRoute,
+    selectingSeatRoute,
+    paymentRoute
 ])
 
 export const router = createRouter({
@@ -77,3 +119,4 @@ export default router
 //         router: typeof router
 //     }
 // }
+
