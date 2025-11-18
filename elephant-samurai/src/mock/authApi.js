@@ -14,6 +14,8 @@ export const mockUsers = [
         email: 'player@test.com',
         password: 'password',
         displayName: 'Test Player',
+        name: 'John',
+        lastName: 'Lennon',
         role: 'player',
         avatar: null,
         gameStats: { level: 3, experience: 750, gamesPlayed: 15 },

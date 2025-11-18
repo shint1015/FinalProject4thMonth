@@ -65,6 +65,11 @@ export function AuthProvider({ children }) {
         }
     }
 
+    const updateProfile = (user) => {
+        setCurrentUser(user)
+    }
+
+
     const resetError = () => setAuthError(null)
 
     const contextValue = {
@@ -77,6 +82,7 @@ export function AuthProvider({ children }) {
         signOut,
         resetError,
         validateSession,
+        updateProfile
     }
 
     return <AuthContext.Provider value={contextValue}>{children}</AuthContext.Provider>
@@ -90,7 +96,7 @@ export function useAuth() {
     useEffect(() => {
         const token = localStorage.getItem('userToken')
         if (token && context.isAuthenticated) {
-            console.log('useAuth called - validating session...')
+            // console.log('useAuth called - validating session...')
             context.validateSession(token)
         }
     }, [])
