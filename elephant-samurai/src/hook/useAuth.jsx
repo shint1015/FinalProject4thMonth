@@ -76,6 +76,7 @@ export function AuthProvider({ children }) {
         user: currentUser,
         isAuthenticated: authStatus === 'authenticated',
         isLoading: authStatus === 'loading',
+        isAdmin: currentUser?.role === 'admin',
         error: authError,
         signIn,
         signOut,

@@ -1,5 +1,5 @@
 // Mock Database
-const mockUsers = [
+export const mockUsers = [
     {
         id: 1,
         email: 'admin@elephant-samurai.com',

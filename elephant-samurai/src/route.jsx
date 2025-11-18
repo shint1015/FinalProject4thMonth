@@ -12,9 +12,20 @@ import ProfileForm from '@/pages/ProfileForm.jsx'
 import SelectingSeat from '@/pages/SelectingSeat.jsx'
 import Payment from '@/pages/Payment.jsx'
 
-// import { useAuth } from '@/hook/useAuth'
+/* Admin pages */
+import ShowList from '@/pages/admin/show/List.jsx'
+import ShowAdd from '@/pages/admin/show/Add.jsx'
+import ShowEdit from '@/pages/admin/show/Edit.jsx'
+import ReservationList from '@/pages/admin/reservation/List.jsx'
+import ReservationAdd from '@/pages/admin/reservation/Add.jsx'
+import ReservationEdit from '@/pages/admin/reservation/Edit.jsx'
+import VenueList from '@/pages/admin/venue/List.jsx'
+import VenueAdd from '@/pages/admin/venue/Add.jsx'
+import VenueEdit from '@/pages/admin/venue/Edit.jsx'
+import UserList from '@/pages/admin/user/List.jsx'
+import UserAdd from '@/pages/admin/user/Add.jsx'
+import UserEdit from '@/pages/admin/user/Edit.jsx'
 
-// const navigate = useNavigate()
 const rootRoute = createRootRoute({
     component: () => (
         <Layout>
@@ -84,37 +95,82 @@ export const selectingSeatRoute = createRoute({
     component: () => <SelectingSeat/>,
 })
 
-// const selectingSeatRoute = createRoute({
-//     getParentRoute: () => rootRoute,
-//     path: '/protected',
-//     beforeLoad: async({location}) => {
-//         const {isAuthenticated} = useAuth();
-//         if (!Authenticated){
-//             throw redirect({
-//                 to: '/login',
-//                 search: {
-//                 // Use the current location to power a redirect after login
-//                 // (Do not use `router.state.resolvedLocation` as it can
-//                 // potentially lag behind the actual current location)
-//                 redirect: location.href,
-//                 },
-//             })
-//         }
-//         return null;
-//     },
-//     component: () => <SelectingSeat/>,
-// })
-
-const PaymentRoute = createRoute({
-    getParentRoute: () => rootRoute,
-    path: '/seatselecting',
-    component: () => <SelectingSeat/>,
-})
-
 const paymentRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/payment',
     component: () => <Payment/>,
+})
+
+const showListRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/admin/show/list',
+    component: () => <ShowList />,
+})
+
+const showAddRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/admin/show/add',
+    component: () => <ShowAdd />,
+})
+
+const showEditRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/admin/show/$id/edit',
+    component: () => <ShowEdit />,
+})
+
+const reservationListRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/admin/reservation/list',
+    component: () => <ReservationList />,
+})
+
+const reservationAddRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/admin/reservation/add',
+    component: () => <ReservationAdd />,
+})
+
+const reservationEditRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/admin/reservation/$id/edit',
+    component: () => <ReservationEdit />,
+})
+
+const venueListRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/admin/venue/list',
+    component: () => <VenueList />,
+})
+
+const venueAddRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/admin/venue/add',
+    component: () => <VenueAdd />,
+})
+
+const venueEditRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/admin/venue/$id/edit',
+    component: () => <VenueEdit />,
+})
+
+const userListRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/admin/user/list',
+    component: () => <UserList />,
+})
+
+const userAddRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/admin/user/add',
+    component: () => <UserAdd />,
+})
+
+const userEditRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/admin/user/$id/edit',
+    component: () => <UserEdit />,
 })
 
 const routeTree = rootRoute.addChildren([
@@ -127,6 +183,18 @@ const routeTree = rootRoute.addChildren([
     profileRoute.addChildren([myTicketsRoute,profileFormRoute]),
     selectingSeatRoute,
     paymentRoute,
+    showListRoute,
+    showAddRoute,
+    showEditRoute,
+    reservationListRoute,
+    reservationAddRoute,
+    reservationEditRoute,
+    venueListRoute,
+    venueAddRoute,
+    venueEditRoute,
+    userListRoute,
+    userAddRoute,
+    userEditRoute,
 ])
 
 export const router = createRouter({
