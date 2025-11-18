@@ -50,15 +50,14 @@ const contactUsRoute = createRoute({
 const showRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/shows',
-    component: () => <ShowPage/>,
+    component: () => <ShowPage />,
 })
 
 export const showDetailRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/show/$showId',
     component: () => <Detail />,
-});
-
+})
 
 const loginRoute = createRoute({
     getParentRoute: () => rootRoute,
@@ -81,27 +80,6 @@ export const selectingSeatRoute = createRoute({
     path: '/seatselecting/$showId',
     component: () => <SelectingSeat/>,
 })
-
-// const selectingSeatRoute = createRoute({
-//     getParentRoute: () => rootRoute,
-//     path: '/protected',
-//     beforeLoad: async({location}) => {
-//         const {isAuthenticated} = useAuth();
-//         if (!Authenticated){
-//             throw redirect({
-//                 to: '/login',
-//                 search: {
-//                 // Use the current location to power a redirect after login
-//                 // (Do not use `router.state.resolvedLocation` as it can
-//                 // potentially lag behind the actual current location)
-//                 redirect: location.href,
-//                 },
-//             })
-//         }
-//         return null;
-//     },
-//     component: () => <SelectingSeat/>,
-// })
 
 const paymentRoute = createRoute({
     beforeLoad: async ({ context, location }) => {
