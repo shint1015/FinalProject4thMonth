@@ -9,7 +9,7 @@ import {
 import Layout from './Layout.jsx' 
 import Home from '@/pages/Home.jsx' 
 import About from '@/pages/About.jsx' 
-import ContactUS from '.@/pages/ContactUs.jsx' 
+import ContactUS from '@/pages/ContactUs.jsx' 
 import LoginPage from '@/pages/auth/LoginPage.jsx' 
 import ShowPage from '@/pages/ShowPage.jsx' 
 import Detail from '@/pages/Detail.jsx' 
@@ -208,7 +208,7 @@ const routeTree = rootRoute.addChildren([
     showRoute,
     showDetailRoute,
     selectingSeatRoute,
-    paymentRoute
+    paymentRoute,
     profileRoute.addChildren([myTicketsRoute,profileFormRoute]),
     showListRoute,
     showAddRoute,
