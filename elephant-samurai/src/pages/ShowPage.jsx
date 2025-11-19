@@ -10,7 +10,7 @@ export default function ShowPage() {
     const [isCategoryOpen, setIsCategoryOpen] = useState(false)
     const [isDateOpen, setIsDateOpen] = useState(false)
 
-    // ✅ 新しく追加：何件表示するかを管理
+    // set 
     const [visibleCount, setVisibleCount] = useState(8)
 
     useEffect(() => {
@@ -46,7 +46,7 @@ export default function ShowPage() {
 
     return (
         <div className='bg-primary-black min-h-screen px-6 md:px-10 py-5 pb-20 text-primary-white'>
-            <h1 className='text-h1 text-primary-yellow font-climate-crisis mb-8'>Shows</h1>
+            <h1 className='text-h1 text-primary-yellow mb-8 ml-5'>Shows</h1>
 
             {/* showFilter compo */}
             <div className='max-w-full'>
