@@ -6,13 +6,13 @@ import {
     HeadContent,
 } from '@tanstack/react-router'
 
-import Layout from './Layout.jsx' 
-import Home from '@/pages/Home.jsx' 
-import About from '@/pages/About.jsx' 
-import ContactUS from '@/pages/ContactUs.jsx' 
-import LoginPage from '@/pages/auth/LoginPage.jsx' 
-import ShowPage from '@/pages/ShowPage.jsx' 
-import Detail from '@/pages/Detail.jsx' 
+import Layout from './Layout.jsx'
+import Home from '@/pages/Home.jsx'
+import About from '@/pages/About.jsx'
+import ContactUS from '@/pages/ContactUs.jsx'
+import LoginPage from '@/pages/auth/LoginPage.jsx'
+import ShowPage from '@/pages/ShowPage.jsx'
+import Detail from '@/pages/Detail.jsx'
 import Profile from '@/pages/Profile.jsx'
 import MyTickets from '@/pages/MyTicket.jsx'
 import ProfileForm from '@/pages/ProfileForm.jsx'
@@ -32,6 +32,8 @@ import VenueEdit from '@/pages/admin/venue/Edit.jsx'
 import UserList from '@/pages/admin/user/List.jsx'
 import UserAdd from '@/pages/admin/user/Add.jsx'
 import UserEdit from '@/pages/admin/user/Edit.jsx'
+
+import { redirect } from '@tanstack/react-router'
 
 const rootRoute = createRootRoute({
     component: () => (
@@ -70,24 +72,24 @@ export const showDetailRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/show/$showId',
     component: () => <Detail />,
-});
+})
 
 export const profileRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/profile',
     component: () => <Profile />,
-});
+})
 
 export const profileFormRoute = createRoute({
     getParentRoute: () => profileRoute,
     path: 'info',
     component: () => <ProfileForm />,
-});
+})
 
 export const myTicketsRoute = createRoute({
-  getParentRoute: () => profileRoute,
-  path: 'mytickets',
-  component: () => <MyTickets />,
+    getParentRoute: () => profileRoute,
+    path: 'mytickets',
+    component: () => <MyTickets />,
 })
 
 const loginRoute = createRoute({
@@ -109,7 +111,7 @@ export const selectingSeatRoute = createRoute({
     },
     getParentRoute: () => rootRoute,
     path: '/seatselecting/$showId',
-    component: () => <SelectingSeat/>,
+    component: () => <SelectingSeat />,
 })
 
 const paymentRoute = createRoute({
@@ -125,7 +127,7 @@ const paymentRoute = createRoute({
     },
     getParentRoute: () => rootRoute,
     path: '/payment',
-    component: () => <Payment/>,
+    component: () => <Payment />,
 })
 
 const showListRoute = createRoute({
@@ -209,7 +211,7 @@ const routeTree = rootRoute.addChildren([
     showDetailRoute,
     selectingSeatRoute,
     paymentRoute,
-    profileRoute.addChildren([myTicketsRoute,profileFormRoute]),
+    profileRoute.addChildren([myTicketsRoute, profileFormRoute]),
     showListRoute,
     showAddRoute,
     showEditRoute,
@@ -235,4 +237,3 @@ export default router
 //         router: typeof router
 //     }
 // }
-
