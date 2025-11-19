@@ -23,9 +23,11 @@ export default function Header() {
     return (
         <header className='flex items-center justify-between py-2 px-4 font-extralight'>
             <div className='flex items-center justify-between w-[65%] lg:w-[45%] xl:w-[35%]'>
-                <div className='logo-container'>
-                    <img src={logo} alt='Elephant Samurai Logo' className='h-7 sm:h-14' />
-                </div>
+                <Link to='/'>
+                    <div className='logo-container'>
+                        <img src={logo} alt='Elephant Samurai Logo' className='h-7 sm:h-14' />
+                    </div>
+                </Link>
                 <nav className='sm:flex gap-x-6 hidden w-[80%] items-center'>
                     <ul className='flex space-x-8 text-center'>
                         <li>
