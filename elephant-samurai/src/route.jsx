@@ -38,7 +38,6 @@ import UserEdit from '@/pages/admin/user/Edit.jsx'
 
 import { redirect } from '@tanstack/react-router'
 
-
 const rootRoute = createRootRoute({
     component: () => (
         <Layout>
@@ -138,12 +137,12 @@ const paymentRoute = createRoute({
 export const confirmRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/confirm/$reservationId',
-    component: () => <Confirm/>,
+    component: () => <Confirm />,
 })
 
 const notFoundRoute = new NotFoundRoute({
     getParentRoute: () => rootRoute,
-    component: () => <NotFound/>,
+    component: () => <NotFound />,
 })
 
 const showListRoute = createRoute({
@@ -242,7 +241,6 @@ const routeTree = rootRoute.addChildren([
     userEditRoute,
     confirmRoute,
 ])
-
 
 export const router = createRouter({
     routeTree,

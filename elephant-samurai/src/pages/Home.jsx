@@ -1,5 +1,6 @@
 import HeroSectionVideo from "@/assets/video/HeroSection.webm"
 import Location from '@/assets/img/Location.png';
+import ShowPage from './ShowPage'
 
 function LocationPhoto() {
   return <img src={Location} alt="Location" className="lg:w-[50%]"/>;
@@ -29,8 +30,8 @@ export default function Home() {
             <h1 className="text-primary-yellow text-h1">
               UPCOMING EVENT
             </h1>
+            <ShowPage/>
 
-            {/* wait for Daiki part */}
           </div>
 
           {/* History */}
