@@ -1,22 +1,22 @@
 export default function ShowFilter({
-  searchTerm,
-  setSearchTerm,
-  categoryFilter,
-  setCategoryFilter,
-  dateFilter,
-  setDateFilter,
-  isCategoryOpen,
-  setIsCategoryOpen,
-  categories,
+    searchTerm,
+    setSearchTerm,
+    categoryFilter,
+    setCategoryFilter,
+    dateFilter,
+    setDateFilter,
+    isCategoryOpen,
+    setIsCategoryOpen,
+    categories,
 }) {
     const handleDateChange = e => {
         setDateFilter(e.target.value)
     }
 
     return (
-        <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-6 w-full mx-auto mb-10'>
+        <div className='flex flex-col px-25 md:flex-row md:items-center md:justify-between gap-4 md:gap-6 w-full mx-auto mb-5'>
             {/* Search bar */}
-            <div className='flex items-center gap-2 border-b border-primary-yellow pb-1 w-full md:w-1/2'>
+            <div className='flex items-center gap-2 border-b border-primary-yellow pb-1 w-20 md:w-1/3'>
                 <img
                     src='/MagnifyingGlass.svg'
                     alt='search'
@@ -75,12 +75,17 @@ export default function ShowFilter({
                 {/* Category */}
                 <div className='relative'>
                     <button
-                        onClick={() => setIsCategoryOpen(!isCategoryOpen)}
+                        onClick={() =>{
+                          if(isCategoryOpen){
+                            setCategoryFilter('')
+                          }
+                          setIsCategoryOpen(!isCategoryOpen)
+                          }}
                         className='flex items-center justify-between border border-primary-yellow text-primary-white rounded px-4 py-2 text-sm font-dm-sans hover:bg-secondary-yellow hover:text-primary-black transition whitespace-nowrap'
                     >
-                        <span className='truncate max-w-32'>
-                            {categoryFilter || 'Categories'}
-                        </span>
+                        <span className='truncate max-w-32'>{
+                          isCategoryOpen?'Categories'
+                        :categoryFilter || 'Categories'}</span>
                         <svg
                             className='ml-2 hover:text-primary-black'
                             xmlns='http://www.w3.org/2000/svg'
@@ -104,11 +109,12 @@ export default function ShowFilter({
                                         setCategoryFilter(categoryFilter === cat ? '' : cat)
                                         setIsCategoryOpen(false)
                                     }}
-                                    className={`px-4 py-2 cursor-pointer text-sm border-b border-primary-yellow hover:bg-secondary-yellow hover:text-primary-black ${
-                                        categoryFilter === cat
-                                            ? 'bg-secondary-yellow text-black font-medium'
-                                            : ''
-                                    }`}
+                                    className={`px-4 py-2 cursor-pointer text-sm border-b border-primary-yellow hover:bg-secondary-yellow hover:text-primary-black 
+                                      ${
+                                          categoryFilter === cat
+                                              ? 'bg-secondary-yellow text-black font-medium'
+                                              : ''
+                                      }`}
                                 >
                                     {cat}
                                 </div>
