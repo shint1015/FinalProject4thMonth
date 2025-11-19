@@ -35,7 +35,7 @@ export default function About() {
             </div>
 
         {/* Seat section */}
-        <div className="p-[2rem] sm:p-[3rem] lg:p-[5rem]">
+        <div className="p-[2rem] sm:p-[3rem] lg:p-[5rem]" id="seatinfo">
             <h3 className="text-primary-yellow text-h3">
                 SEATED INFO
             </h3>

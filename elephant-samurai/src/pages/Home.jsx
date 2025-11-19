@@ -12,6 +12,9 @@ export default function Home() {
     const HandleSeeAll = () => {
       navigate({ to: "/shows" });
     }
+    const HandleSeat = () => {
+      navigate({ to: "/about#seatinfo" });
+    }
     return (
         <>
             {/* Hero section */}
@@ -54,7 +57,7 @@ export default function Home() {
                 For more than twenty years, Samurai Elephant has stood as a space where creativity meets passion, Uniting artists and audiences through unforgettable stories on stage.
               </p>
               <p className="mt-4 text-primary-white text-body">
-                Explore our <a className="underline">seating and venue layout ↗</a> to plan your perfect view.
+                Explore our <a className="underline cursor-pointer" onClick={HandleSeat}>seating and venue layout ↗</a> to plan your perfect view.
               </p>
             </div>
           </div>
