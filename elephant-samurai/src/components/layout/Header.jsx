@@ -242,7 +242,7 @@ export default function Header() {
                         <>
                             <li>
                                 <Link
-                                    to='/profile'
+                                    to='/profile/info'
                                     onClick={toggleMobileMenu}
                                     className='text-primary-white hover:text-primary-yellow'
                                 >
