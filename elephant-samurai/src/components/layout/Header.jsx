@@ -21,7 +21,7 @@ export default function Header() {
     ]
 
     return (
-        <header className='flex items-center justify-between py-2 px-4 font-extralight'>
+        <header className='flex items-center justify-between py-2 px-4 font-extralight sticky top-0 z-10 bg-primary-black'>
             <div className='flex items-center justify-between w-[65%] lg:w-[45%] xl:w-[35%]'>
                 <Link to='/'>
                     <div className='logo-container'>
