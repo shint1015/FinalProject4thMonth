@@ -77,24 +77,24 @@ export const showDetailRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/show/$showId',
     component: () => <Detail />,
-});
+})
 
 export const profileRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/profile',
     component: () => <Profile />,
-});
+})
 
 export const profileFormRoute = createRoute({
     getParentRoute: () => profileRoute,
     path: 'info',
     component: () => <ProfileForm />,
-});
+})
 
 export const myTicketsRoute = createRoute({
-  getParentRoute: () => profileRoute,
-  path: 'mytickets',
-  component: () => <MyTickets />,
+    getParentRoute: () => profileRoute,
+    path: 'mytickets',
+    component: () => <MyTickets />,
 })
 
 export const profileRoute = createRoute({
@@ -284,4 +284,3 @@ export default router
 //         router: typeof router
 //     }
 // }
-
