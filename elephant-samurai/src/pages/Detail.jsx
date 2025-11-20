@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { showDetailRoute } from '@/route'
-import { Link } from "@tanstack/react-router"
+import { Link } from '@tanstack/react-router'
 
 export default function ShowDetail() {
     const { showId } = showDetailRoute.useParams()
@@ -81,7 +81,7 @@ export default function ShowDetail() {
                     {/* botton */}
                     <Link to='/seatselecting/$showId' params={{ showId: showId }}>
                         <div className='flex justify-center lg:justify-start'>
-                            <button className='w-[50%] mt-2 lg:w-[22%] py-3 bg-primary-yellow text-primary-black font-dm-sans rounded-md hover:bg-secondary-yellow transition'>
+                            <button className='mt-5 py-3 px-5 bg-primary-yellow text-primary-black font-dm-sans rounded-md hover:bg-secondary-yellow transition'>
                                 Select the Seat
                             </button>
                         </div>

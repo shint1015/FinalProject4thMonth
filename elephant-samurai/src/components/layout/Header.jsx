@@ -6,12 +6,19 @@ import xmarkIcon from '@/assets/icon/xmark.svg'
 import { useAuth } from '@/hook/useAuth'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import UserCircle from '@/assets/icon/UserCircle.svg'
+import { useRouter } from '@tanstack/react-router'
 
 export default function Header() {
+    const router = useRouter()
     const { user, isAuthenticated, isAdmin, signOut } = useAuth()
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(undefined)
     const toggleMobileMenu = () => {
         setMobileMenuOpen(prev => !prev)
+        scrollToTop()
+    }
+
+    const scrollToTop = () => {
+        router.scroll({ top: 0 })
     }
     const adminUrls = [
         { href: '/admin/show/list', label: 'Shows' },
@@ -21,21 +28,28 @@ export default function Header() {
     ]
 
     return (
-        <header className='flex items-center justify-between py-2 px-4 font-extralight'>
+        <header className='flex items-center justify-between py-2 px-4 font-extralight sticky top-0 z-10 bg-primary-black'>
             <div className='flex items-center justify-between w-[65%] lg:w-[45%] xl:w-[35%]'>
-                <div className='logo-container'>
-                    <img src={logo} alt='Elephant Samurai Logo' className='h-7 sm:h-14' />
-                </div>
+                <Link to='/' onClick={scrollToTop}>
+                    <div className='logo-container'>
+                        <img src={logo} alt='Elephant Samurai Logo' className='h-7 sm:h-14' />
+                    </div>
+                </Link>
                 <nav className='sm:flex gap-x-6 hidden w-[80%] items-center'>
                     <ul className='flex space-x-8 text-center'>
                         <li>
-                            <Link to='/' className='text-primary-white hover:text-primary-gray'>
+                            <Link
+                                to='/'
+                                onClick={scrollToTop}
+                                className='text-primary-white hover:text-primary-gray'
+                            >
                                 Home
                             </Link>
                         </li>
                         <li>
                             <Link
                                 to='/shows'
+                                onClick={scrollToTop}
                                 className='text-primary-white hover:text-primary-gray'
                             >
                                 Show
@@ -44,6 +58,7 @@ export default function Header() {
                         <li>
                             <Link
                                 to='/about'
+                                onClick={scrollToTop}
                                 className='text-primary-white hover:text-primary-gray'
                             >
                                 About
@@ -52,6 +67,7 @@ export default function Header() {
                         <li>
                             <Link
                                 to='/contact'
+                                onClick={scrollToTop}
                                 className='text-primary-white hover:text-primary-gray'
                             >
                                 Contact Us
@@ -77,7 +93,9 @@ export default function Header() {
                                         key={link.href}
                                         className='text-right block text-primary-white data-focus:bg-white/5 data-focus:outline-hidden px-3 py-2'
                                     >
-                                        <Link to={link.href}>{link.label}</Link>
+                                        <Link to={link.href} onClick={scrollToTop}>
+                                            {link.label}
+                                        </Link>
                                     </MenuItem>
                                 ))}
                             </MenuItems>
@@ -106,7 +124,7 @@ export default function Header() {
                                     <Link
                                         to='/profile/info'
                                         className='block px-4 py-2 text-sm text-primary-white data-focus:bg-white/5 data-focus:outline-hidden'
-                                        >
+                                    >
                                         Profile
                                     </Link>
                                 </MenuItem>
@@ -146,7 +164,7 @@ export default function Header() {
             <div
                 id='mobile-menu'
                 className={[
-                    'absolute top-10 left-0 w-full bg-primary-black px-4 py-4 sm:hidden z-9999 h-full',
+                    'absolute top-10 left-0 w-full bg-primary-black px-4 py-4 sm:hidden z-[9999] h-[100vh]',
                     isMobileMenuOpen === undefined
                         ? 'hidden'
                         : isMobileMenuOpen
@@ -242,7 +260,7 @@ export default function Header() {
                         <>
                             <li>
                                 <Link
-                                    to='/profile'
+                                    to='/profile/info'
                                     onClick={toggleMobileMenu}
                                     className='text-primary-white hover:text-primary-yellow'
                                 >
