@@ -4,6 +4,7 @@ import {
     createRouter,
     Outlet,
     HeadContent,
+    NotFoundRoute,
 } from '@tanstack/react-router'
 
 import Layout from './Layout.jsx'
@@ -18,6 +19,8 @@ import MyTickets from '@/pages/MyTicket.jsx'
 import ProfileForm from '@/pages/ProfileForm.jsx'
 import SelectingSeat from '@/pages/SelectingSeat.jsx'
 import Payment from '@/pages/Payment.jsx'
+import Confirm from '@/pages/Confirm.jsx'
+import NotFound from '@/pages/NotFound.jsx'
 
 /* Admin pages */
 import ShowList from '@/pages/admin/show/List.jsx'
@@ -34,6 +37,7 @@ import UserAdd from '@/pages/admin/user/Add.jsx'
 import UserEdit from '@/pages/admin/user/Edit.jsx'
 
 import { redirect } from '@tanstack/react-router'
+
 
 const rootRoute = createRootRoute({
     component: () => (
@@ -62,6 +66,7 @@ const contactUsRoute = createRoute({
     path: '/contact',
     component: () => <ContactUS />,
 })
+
 const showRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/shows',
@@ -128,6 +133,17 @@ const paymentRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/payment',
     component: () => <Payment />,
+})
+
+export const confirmRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: '/confirm/$reservationId',
+    component: () => <Confirm/>,
+})
+
+const notFoundRoute = new NotFoundRoute({
+    getParentRoute: () => rootRoute,
+    component: () => <NotFound/>,
 })
 
 const showListRoute = createRoute({
@@ -211,7 +227,7 @@ const routeTree = rootRoute.addChildren([
     showDetailRoute,
     selectingSeatRoute,
     paymentRoute,
-    profileRoute.addChildren([myTicketsRoute, profileFormRoute]),
+    profileRoute.addChildren([myTicketsRoute, profileFormRoute, notFoundRoute]),
     showListRoute,
     showAddRoute,
     showEditRoute,
@@ -224,10 +240,13 @@ const routeTree = rootRoute.addChildren([
     userListRoute,
     userAddRoute,
     userEditRoute,
+    confirmRoute,
 ])
+
 
 export const router = createRouter({
     routeTree,
+    notFoundRoute,
 })
 
 export default router
