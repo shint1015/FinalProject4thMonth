@@ -77,7 +77,7 @@ export default function Confirm() {
                         <div className='flex items-center gap-2 justify-center md:justify-start'>
                             <img src={Ticket} className='w-6 h-6' />
                             <p className='text-detail text-primary-white'>
-                                {booking.showSelectedSeat.length}
+                               x {booking.showSelectedSeat.length}
                             </p>
                         </div>
                     </div>

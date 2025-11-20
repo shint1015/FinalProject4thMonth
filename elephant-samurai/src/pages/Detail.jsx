@@ -34,23 +34,23 @@ export default function ShowDetail() {
     }
 
     return (
-        <div className='bg-primary-black pt-[2em] pb-[3em] flex flex-col justify-center items-center px-6 md:px-10 text-primary-white font-dm-sans'>
-            <div className=' w-full items-center flex flex-col md:flex-row gap-10'>
-                <div className='flex md:self-start justify-center lg:justify-start'>
-                    <img src={show.image_url} alt={show.title} className='w-full h-auto' />
+        <div className='bg-primary-black pt-[2em] pb-[3em] flex flex-col px-6 md:px-10 text-primary-white font-dm-sans'>
+            <div className='lg:w-full flex flex-col md:flex-row gap-10'>
+                <div className='flex justify-center items-center'>
+                    <img src={show.image_url} alt={show.title} className='w-[60%] lg:w-full h-auto' />
                 </div>
 
                 {/* title */}
                 <div className='flex-1'>
-                    <h1 className=' text-primary-yellow text-title text-detailTitle-weight tracking-[1%] text-center md:text-left'>
+                    <h1 className=' text-primary-yellow text-title tracking-[1%] md:text-left'>
                         {show.title}
                     </h1>
-                    <p className='text-subbody font-dm-sans text-center md:text-left'>
+                    <p className='text-subbody font-dm-sans md:text-left mb-4'>
                         {show.category}
                     </p>
 
                     {/* top  */}
-                    <div className='grid grid-cols-1 md:grid-cols-2 gap-y-3 font-dm-sans text-center md:text-left'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 font-dm-sans  md:text-left'>
                         {/* Date*/}
                         <div>
                             <p className='text-primary-yellow text-subtitle'>Date</p>
@@ -65,7 +65,7 @@ export default function ShowDetail() {
                     </div>
 
                     {/* bottom  */}
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-y-3 font-dm-sans text-center md:text-left'>
+                    <div className='grid grid-cols-1 lg:grid-cols-2 font-dm-sans'>
                         {/* Time*/}
                         <div>
                             <p className='text-primary-yellow text-subtitle'>Time</p>
@@ -80,7 +80,7 @@ export default function ShowDetail() {
 
                     {/* botton */}
                     <Link to='/seatselecting/$showId' params={{ showId: showId }}>
-                        <div className='flex justify-center lg:justify-start'>
+                        <div className='flex lg:justify-start'>
                             <button className='mt-5 py-3 px-5 bg-primary-yellow text-primary-black font-dm-sans rounded-md hover:bg-secondary-yellow transition'>
                                 Select the Seat
                             </button>
@@ -90,7 +90,7 @@ export default function ShowDetail() {
             </div>
 
             {/* description part */}
-            <div className='flex flex-col items-center mt-10 text-detail gap-5'>
+            <div className='flex flex-col items-center mt-10 text-body lg:text-detail gap-5'>
                 <div>
                     <p>{show.description.summary1}</p>
                 </div>
