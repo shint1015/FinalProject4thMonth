@@ -19,7 +19,7 @@ export default function ShowCard({ show }) {
             </Link>
 
             <div className='pb-4 mt-auto'>
-                <Link to='/show/$showId' params={{ showId: show.id }} className='block'>
+                <Link to='/seatselecting/$showId' params={{ showId: show.id }} className='block'>
                     <button className='bg-primary-yellow text-black font-dm-sans py-2 px-4 rounded-md w-full hover:bg-secondary-yellow transition'>
                         Buy Tickets
                     </button>
