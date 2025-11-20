@@ -84,7 +84,7 @@ export default function Confirm() {
                 </div>
 
                 <Link to='/profile/mytickets'>
-                <button className='mt-8 bg-primary-yellow text-primary-black w-60 px-8 py-3 rounded-[3%] hover:bg-secondary-yellow transition'>
+                <button className='mt-8 bg-primary-yellow text-primary-black w-60 px-8 py-3 rounded-md hover:bg-secondary-yellow transition'>
                     View My Ticket
                 </button>
                 </Link>
