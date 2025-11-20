@@ -5,8 +5,10 @@ import Date from '@/assets/icon/Date.svg'
 import Location from '@/assets/icon/Location.svg'
 import Ticket from '@/assets/icon/Ticket.svg'
 import Rectangle from '@/assets/img/Rectangle.png'
+import { confirmRoute } from "@/route"
 
 export default function Confirm() {
+    const { reservationId } = confirmRoute
     const [booking, setBooking] = useState(null)
 
     
@@ -19,8 +21,9 @@ export default function Confirm() {
    
 
     useEffect(() => {
-        const data = localStorage.getItem('reservation')
-        if (data) setBooking(JSON.parse(data))
+        const data = localStorage.getItem('reservations')
+        const target = JSON.parse(data).find(item => item.reservationId === reservationId)
+        if (target) setBooking(target)
     }, [])
     if (!booking) return <div>Loading...</div>
 

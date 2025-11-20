@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"; 
-import DateIcon from '../assets/icon/Date.svg'
-import TimeIcon from '../assets/icon/Clock.svg'
-import LocationIcon from '../assets/icon/Location.svg'
-import Ticket from '../assets/icon/Ticket.svg'
-import CountDown from "../components/layout/Countdown";
+import DateIcon from '@/assets/icon/Date.svg'
+import TimeIcon from '@/assets/icon/Clock.svg'
+import LocationIcon from '@/assets/icon/Location.svg'
+import Ticket from '@/assets/icon/Ticket.svg'
+import CountDown from "@/components/layout/Countdown";
+
 import { useNavigate } from "@tanstack/react-router"; //link to dashbord
 
 export default function Payment(){
@@ -38,7 +39,7 @@ export default function Payment(){
         const oldTicket = JSON.parse(localStorage.getItem("reservations")) || []; // make it array so can add more
         const updatedTickets = [...oldTicket, updatedReservation]; 
         localStorage.setItem("reservations", JSON.stringify(updatedTickets)); // will add all ticket and not replace
-        navigate({ to:"/profile/mytickets"});
+        navigate({ to:"/confirm/$reservationId", params: {reservationId: updatedReservation.reservationId}});
     }
 
     return (

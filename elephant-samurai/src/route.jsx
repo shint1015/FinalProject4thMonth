@@ -135,7 +135,7 @@ const paymentRoute = createRoute({
     component: () => <Payment />,
 })
 
-const confirmRoute = createRoute({
+export const confirmRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: '/confirm',
     component: () => <Confirm/>,
