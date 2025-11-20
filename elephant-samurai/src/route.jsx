@@ -97,36 +97,6 @@ export const myTicketsRoute = createRoute({
     component: () => <MyTickets />,
 })
 
-export const profileRoute = createRoute({
-    getParentRoute: () => rootRoute,
-    path: '/profile',
-    component: () => <Profile />,
-})
-
-export const profileFormRoute = createRoute({
-    getParentRoute: () => profileRoute,
-    path: 'info',
-    component: () => <ProfileForm />,
-})
-
-export const myTicketsRoute = createRoute({
-    getParentRoute: () => profileRoute,
-    path: 'mytickets',
-    component: () => <MyTickets />,
-})
-
-export const myTicketsRoute = createRoute({
-  getParentRoute: () => profileRoute,
-  path: '/mytickets',
-  component: () => <MyTickets />,
-})
-
-const loginRoute = createRoute({
-    getParentRoute: () => rootRoute,
-    path: '/login',
-    component: () => <LoginPage />,
-})
-
 export const selectingSeatRoute = createRoute({
     beforeLoad: async ({ context, location }) => {
         if (!context.auth.isAuthenticated) {
