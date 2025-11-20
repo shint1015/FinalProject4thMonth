@@ -137,7 +137,7 @@ const paymentRoute = createRoute({
 
 export const confirmRoute = createRoute({
     getParentRoute: () => rootRoute,
-    path: '/confirm',
+    path: '/confirm/$reservationId',
     component: () => <Confirm/>,
 })
 

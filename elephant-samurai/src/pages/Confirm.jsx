@@ -11,15 +11,6 @@ export default function Confirm() {
     const { reservationId } = confirmRoute
     const [booking, setBooking] = useState(null)
 
-    
-    useEffect(() => {
-        const data = localStorage.getItem('reservation');
-        if (data) setBooking(JSON.parse(data));
-    }, []);
-    if (!booking) return <div>Loading...</div>;
-
-   
-
     useEffect(() => {
         const data = localStorage.getItem('reservations')
         const target = JSON.parse(data).find(item => item.reservationId === reservationId)
@@ -29,7 +20,7 @@ export default function Confirm() {
 
     return (
         <div className='bg-black text-white min-h-screen flex flex-col items-center justify-center'>
-            <section id='displayArea' className='grid-row bg-black min-h-full text-center'>
+            <section id='displayArea' className='grid-row bg-black min-h-full text-center w-full'>
                 <div className=''>
                     <img src={ConfirmLogo} alt='logo' className='mx-auto mb-4 w-[15%] h-[15%]' />
                 </div>
@@ -41,7 +32,7 @@ export default function Confirm() {
                     id='DetailBox'
                     className='flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12'
                 >
-                    <div id='eventImage' className='-ml-24'>
+                    <div id='eventImage' className='m-0 sm:ml-24'>
                         <img src={Rectangle} alt='Event' className='w-64 h-auto ' />
                     </div>
 
