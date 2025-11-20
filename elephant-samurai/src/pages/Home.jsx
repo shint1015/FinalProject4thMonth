@@ -1,12 +1,21 @@
 import HeroSectionVideo from '@/assets/video/HeroSection.webm'
 import Location from '@/assets/img/Location.png'
 import { Link } from '@tanstack/react-router'
+import { useEffect, useState } from 'react'
+import ShowList from '@/components/common/ShowList'
 
 function LocationPhoto() {
     return <img src={Location} alt='Location' className='lg:w-[50%]' />
 }
 
 export default function Home() {
+    const [shows, setShows] = useState([])
+    useEffect(() => {
+        fetch('/data/event.json')
+            .then(res => res.json())
+            .then(setShows)
+            .catch(err => console.error('Error fetching shows:', err))
+    }, [])
     return (
         <>
             {/* Hero section */}
@@ -29,6 +38,7 @@ export default function Home() {
             {/* Upcoming event */}
             <div className='p-[2rem] sm:p-[3rem] lg:p-[5rem]'>
                 <h1 className='text-primary-yellow text-h1'>UPCOMING EVENT</h1>
+                <ShowList shows={shows} />
 
                 <div className='text-center'>
                     <Link

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import ShowCard from '@/components/common/ShowCard'
 import ShowFilter from '@/components/common/ShowFilter'
+import ShowList from '@/components/common/ShowList'
 
 export default function ShowPage() {
     const [shows, setShows] = useState([])
@@ -67,15 +67,7 @@ export default function ShowPage() {
             </div>
 
             {/* カード一覧 */}
-            <section className='grid grid-cols-2 lg:grid-cols-4 gap-8 mx-auto'>
-                {visibleShows.length > 0 ? (
-                    visibleShows.map(show => <ShowCard key={show.id} show={show} />)
-                ) : (
-                    <p className='col-span-full text-center text-primary-yellow text-detail'>
-                        No shows found.
-                    </p>
-                )}
-            </section>
+            <ShowList shows={visibleShows} />
 
             {/* View More button */}
             {visibleCount < filteredShows.length && (
