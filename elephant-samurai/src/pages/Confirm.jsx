@@ -1,18 +1,21 @@
 import { useState, useEffect } from 'react'
-import ConfirmLogo from '@/assets/icon/ConfirmLogo.svg'
+import ConfirmLogo from '@/assets/icon/Confirm.svg'
 import Clock from '@/assets/icon/Clock.svg'
 import Date from '@/assets/icon/Date.svg'
 import Location from '@/assets/icon/Location.svg'
 import Ticket from '@/assets/icon/Ticket.svg'
 import Rectangle from '@/assets/img/Rectangle.png'
 import { confirmRoute } from "@/route"
+import { Link } from '@tanstack/react-router'
 
 export default function Confirm() {
-    const { reservationId } = confirmRoute
+    const { reservationId } = confirmRoute.useParams()
     const [booking, setBooking] = useState(null)
 
     useEffect(() => {
         const data = localStorage.getItem('reservations')
+        console.log(reservationId)
+        console.log(data)
         const target = JSON.parse(data).find(item => item.reservationId === reservationId)
         if (target) setBooking(target)
     }, [])
@@ -22,7 +25,7 @@ export default function Confirm() {
         <div className='bg-black text-white min-h-screen flex flex-col items-center justify-center'>
             <section id='displayArea' className='grid-row bg-black min-h-full text-center w-full'>
                 <div className=''>
-                    <img src={ConfirmLogo} alt='logo' className='mx-auto mb-4 w-[15%] h-[15%]' />
+                    <img src={ConfirmLogo} alt='logo' className='mx-auto mb-4 w-[10%] h-[10%]' />
                 </div>
                 <div id='title'>
                     <h4 className='mb-4 text-h4 text-primary-yellow'>YOU GOT THE TICKET!</h4>
@@ -30,7 +33,7 @@ export default function Confirm() {
 
                 <div
                     id='DetailBox'
-                    className='flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12'
+                    className='flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 justify-center'
                 >
                     <div id='eventImage' className='m-0 sm:ml-24'>
                         <img src={Rectangle} alt='Event' className='w-64 h-auto ' />
@@ -82,9 +85,11 @@ export default function Confirm() {
                     </div>
                 </div>
 
+                <Link to='/profile/mytickets'>
                 <button className='mt-8 bg-primary-yellow text-primary-black w-60 px-8 py-3 rounded-[3%] hover:bg-secondary-yellow transition'>
                     View My Ticket
                 </button>
+                </Link>
             </section>
         </div>
     )
