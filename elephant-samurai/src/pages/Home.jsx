@@ -40,11 +40,10 @@ export default function Home() {
                 <h1 className='text-primary-yellow text-h1'>UPCOMING EVENT</h1>
                 <ShowList shows={shows} />
 
-                <div className='text-center'>
+                <div className='text-center mt-6'>
                     <Link
                         to='/shows'
-                        className='border border-primary-yellow text-body text-primary-yellow font-dm-sans px-6 py-2 rounded-md hover:bg-primary-yellow hover:text-primary-black'
-                    >
+                        className='border border-primary-yellow text-body text-primary-yellow font-dm-sans px-6 py-2 rounded-md hover:bg-primary-yellow hover:text-primary-black'>
                         See All Event
                     </Link>
                 </div>
