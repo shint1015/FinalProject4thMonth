@@ -75,7 +75,12 @@ export default function ShowFilter({
                 {/* Category */}
                 <div className='relative'>
                     <button
-                        onClick={() => setIsCategoryOpen(!isCategoryOpen)}
+                        onClick={() => {
+                            if (isCategoryOpen) {
+                                setCategoryFilter('')
+                            }
+                            setIsCategoryOpen(!isCategoryOpen)
+                        }}
                         className='flex items-center justify-between border border-primary-yellow text-primary-white rounded px-4 py-2 text-sm font-dm-sans hover:bg-secondary-yellow hover:text-primary-black transition whitespace-nowrap'
                     >
                         <span className='truncate max-w-[8rem]'>
